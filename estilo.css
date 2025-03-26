@@ -1,42 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
-body {color:#ccc; font-family:"Winky Sans","trebuchet ms"; background:#333; border:0px; margin:10px; margin-top:0px; padding-top:0; font-size:1em;}
-body.white {color:#666; background:#fff; border:0px;}
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+:root {
+  color-scheme: light dark;
+  --primary-color: light-dark(#000, #fff);
+  --primary-background: light-dark(#fffffc, #121212);
+  --highlight-color: light-dark(hotpink, lime);
+  --primeiro-titulo-color: light-dark(chocolate,#f90);
+  --segundo-titulo-color: light-dark(hotpink,hotpink);
+  --link-color: light-dark(#007FDB,lightblue);
+  --link-sobre-color: light-dark(#99cc00,olive);
+  --link-ativo-color: light-dark(lightpink,deeppink);
+  --code-color: light-dark(navy,lightblue);
+  --border-color: light-dark(purple,lime);
+  --termo-color:light-dark(olive,#9c0);
+}
 
-body::-webkit-scrollbar {background:#333; width:15px; height:15px;} /* barra de rolagem toda */
-body::-webkit-scrollbar-thumb {background:#333; box-shadow:0px 0px 2px 2px #fff inset;} /* parte da barra que se movimenta */
-body::-webkit-scrollbar-thumb:hover {background:#333; box-shadow:0px 0px 2px 2px #f90 inset;} /* parte da barra que se movimenta */
-body::-webkit-scrollbar-thumb:active {background: #333; box-shadow:0px 0px 2px 2px #9c0 inset;} /* parte da barra que se movimenta */
-body::-webkit-scrollbar-button {background:;} /* ponta da barra de rolagem */
-body::-webkit-scrollbar-track {background:#333;} /* fundo da barra de rolagem, parte fixa */
-body::-webkit-scrollbar-track-piece {background:#333;} /* fundo da barra de rolagem, parte que ainda falta rolar */
-body::-webkit-scrollbar-corner {background:#333;} /* canto inferior direito da barra de rolagem */
+:root {
+  &:has(input[name="color-scheme"][value="light dark"]:checked) {
+    color-scheme: light dark;
+  }
+  &:has(input[name="color-scheme"][value="light"]:checked) {
+    color-scheme: light;
+  }
+  &:has(input[name="color-scheme"][value="dark"]:checked) {
+    color-scheme: dark;
+  }
+}
+
+* {color:var(--primary-color);}
+
+/* CSS dos links abaixo */
+a {color:var(--link-color);}
+a:hover {color:var(--link-sobre-color);}
+a:active {color:var(--link-ativo-color);}
+a img {border:0;}
+a:hover img {border:0;}
+a:active img {border:0;}
+a:link img {border:0;}
+a:visited img {border:0;}
+
+/* CSS dos links acima */
 
 
-body.white::-webkit-scrollbar {background:#fff; width:15px; height:15px;} /* barra de rolagem toda */
-body.white::-webkit-scrollbar-thumb {box-shadow:0 0 0 0; background: linear-gradient(to right,#ccc,#999,#ccc,#999);} /* parte da barra que se movimenta */
-body.white::-webkit-scrollbar-thumb:hover {box-shadow:0 0 0 0; background: linear-gradient(to right,chocolate,brown,chocolate,brown);} /* parte da barra que se movimenta */
-body.white::-webkit-scrollbar-thumb:active {box-shadow:0 0 0 0; background: linear-gradient(to right,#9c0,#690,#9c0,#690);} /* parte da barra que se movimenta */
-body.white::-webkit-scrollbar-button {background:;} /* ponta da barra de rolagem */
-body.white::-webkit-scrollbar-track {background:#fff;} /* fundo da barra de rolagem, parte fixa */
-body.white::-webkit-scrollbar-track-piece {background:#fff;} /* fundo da barra de rolagem, parte que ainda falta rolar */
-body.white::-webkit-scrollbar-corner {background:#fff;} /* canto inferior direito da barra de rolagem */
+code, .code {color:var(--code-color); border:1px dotted; border-color:var(--border-color); padding:10px; font-family:'courier new';}
 
+body {color:var(--primary-background); background: var(--primary-background); font-family:"Inter","trebuchet ms"; border:0px; margin:10px; margin-top:0px; padding-top:0; font-size:1em;}
 
+hr {height:5px; border:0; background:linear-gradient(to right, #9c0, orange, deeppink, purple, navy);border-radius:3px; clear:both; display:block;}
 
 div#contem {padding:20px; font-size:1em;}
 ul#nav li {display:inline; padding:10px}
 
-h1 {font-size:3.0em;}
-h2 {color:#f90; font-size:2.0em; margin: 1em auto 0.3em;}
+h1 {font-size:3.0em; color:var(--primeiro-titulo-color);}
+h2 {font-size:2.0em; margin: 1em auto 0.3em; color:var(--segundo-titulo-color);}
+h3 {font-size:150%;}
+h4 {font-size:140%;}
+h5 {font-size:130%;}
+h6 {font-size:120%;}
 
-body.white h1 {color:chocolate;}
-body.white h2 {color:hotpink;}
+h3, h4, h5, h6 {color:var(--segundo-titulo-color);}
 
 dt, dd.price {font-size:1.8em; font-weight:bold}
-dt {color:#99cc00; padding-right:3px;}
+dt {padding-right:3px;color:var(--termo-color);}
 dd {font-size:1.5em; padding-bottom:20px;}
-dd.valor {font-size:25px; color:#ccc; float:right; padding-left:3px}
-dd.detalhes {font-style:italic; color:#fff; float:left; padding:3px 0; width:100%;border-top:1px dashed #ccc;}
+dd.valor {font-size:25px; float:right; padding-left:3px}
+dd.detalhes {font-style:italic; float:left; padding:3px 0; width:100%;border-top:1px dashed #ccc;}
 p {font-size:0.9em;text-align:left; margin-top:60px;}
 
 #ring {padding:20px;}
@@ -49,29 +76,32 @@ p {font-size:0.9em;text-align:left; margin-top:60px;}
 #ring a {color:skyblue;}
 #ring a:hover {color:linen;}
 
-body.white a {color:#007FDB}
-body.white a:hover {color:olive;}
-body.white a:active {color:deeppink;}
-
-a {color:lightblue;}
-a:hover {color:#99cc00;}
-a:active {color:lightpink;}
-
-a img {border:0;}
-a:hover img {border:0;}
-a:active img {border:0;}
-a:link img {border:0;}
-a:visited img {border:0;}
+.centro {margin-left:auto; margin-right:auto;text-align:center;display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */}
 
 .blue {color:blue;} .red {color:red;}
-
-code, .code {font-family:'courier new'; color:#ffffff;}
-.code {padding:10px; border:1px lime dotted;}
-
-body.white code, body.white .code {color:navy;}
-body.white .code {border:1px blue dotted;}
 
 video {margin-top:20px; margin-bottom:30px; margin-left:auto; margin-right:auto; text-align:center; display:block;}
 audio {margin-left:auto; margin-right:auto; text-align:center; float:none; display:block;}
 
-.gcse-searchresults {background-color:rgba(0,0,0,0) !important;}
+.gcse-searchresults {background-color:var(--primary-background) !important;}
+
+/** tudo abaixo sobre barra de rolagem */
+body::-webkit-scrollbar {background:#333; width:15px; height:15px;} /* barra de rolagem toda */
+body::-webkit-scrollbar-thumb {background:#333; box-shadow:0px 0px 2px 2px #fff inset;} /* parte da barra que se movimenta */
+body::-webkit-scrollbar-thumb:hover {background:#333; box-shadow:0px 0px 2px 2px #f90 inset;} /* parte da barra que se movimenta */
+body::-webkit-scrollbar-thumb:active {background: #333; box-shadow:0px 0px 2px 2px #9c0 inset;} /* parte da barra que se movimenta */
+body::-webkit-scrollbar-button {background:;} /* ponta da barra de rolagem */
+body::-webkit-scrollbar-track {background:#333;} /* fundo da barra de rolagem, parte fixa */
+body::-webkit-scrollbar-track-piece {background:#333;} /* fundo da barra de rolagem, parte que ainda falta rolar */
+body::-webkit-scrollbar-corner {background:#333;} /* canto inferior direito da barra de rolagem */
+body.white::-webkit-scrollbar {background:#fff; width:15px; height:15px;} /* barra de rolagem toda */
+body.white::-webkit-scrollbar-thumb {box-shadow:0 0 0 0; background: linear-gradient(to right,#ccc,#999,#ccc,#999);} /* parte da barra que se movimenta */
+body.white::-webkit-scrollbar-thumb:hover {box-shadow:0 0 0 0; background: linear-gradient(to right,chocolate,brown,chocolate,brown);} /* parte da barra que se movimenta */
+body.white::-webkit-scrollbar-thumb:active {box-shadow:0 0 0 0; background: linear-gradient(to right,#9c0,#690,#9c0,#690);} /* parte da barra que se movimenta */
+body.white::-webkit-scrollbar-button {background:;} /* ponta da barra de rolagem */
+body.white::-webkit-scrollbar-track {background:#fff;} /* fundo da barra de rolagem, parte fixa */
+body.white::-webkit-scrollbar-track-piece {background:#fff;} /* fundo da barra de rolagem, parte que ainda falta rolar */
+body.white::-webkit-scrollbar-corner {background:#fff;} /* canto inferior direito da barra de rolagem */
+/** tudo acima sobre barra de rolagem */
