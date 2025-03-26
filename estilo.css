@@ -12,6 +12,8 @@
   --code-color: light-dark(navy,lightblue);
   --border-color: light-dark(purple,lime);
   --termo-color:light-dark(olive,#9c0);
+  --mark-bg:light-dark(yellow,yellow);
+  --mark-color:light-dark(#000,#000);
 }
 
 :root {
@@ -40,7 +42,7 @@ a:visited img {border:0;}
 
 /* CSS dos links acima */
 
-
+mark {color:var(--mark-color);background:var(--mark-bg);}
 code, .code {color:var(--code-color); border:1px dotted; border-color:var(--border-color); padding:10px; font-family:'courier new';}
 
 body {color:var(--primary-background); background: var(--primary-background); font-family:"Inter","trebuchet ms"; border:0px; margin:10px; margin-top:0px; padding-top:0; font-size:1em;}
