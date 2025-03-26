@@ -7,8 +7,8 @@
   --primeiro-titulo-color: light-dark(chocolate,#f90);
   --segundo-titulo-color: light-dark(hotpink,hotpink);
   --link-color: light-dark(#007FDB,lightblue);
-  --link-sobre-color: light-dark(#99cc00,olive);
-  --link-ativo-color: light-dark(lightpink,deeppink);
+  --link-sobre-color: light-dark(olive,#99cc00);
+  --link-ativo-color: light-dark(deeppink,lightpink);
   --code-color: light-dark(navy,lightblue);
   --border-color: light-dark(purple,lime);
   --termo-color:light-dark(olive,#9c0);
@@ -29,8 +29,8 @@
 * {color:var(--primary-color);}
 
 /* CSS dos links abaixo */
-a {color:var(--link-color);}
-a:hover {color:var(--link-sobre-color);}
+a {color:var(--link-color); text-decoration:none;}
+a:hover {color:var(--link-sobre-color); text-decoration: underline; text-decoration-color:var(--link-color); text-decoration-thickness: 1px; text-decoration-style: wavy;}
 a:active {color:var(--link-ativo-color);}
 a img {border:0;}
 a:hover img {border:0;}
