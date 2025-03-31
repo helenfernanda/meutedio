@@ -28,7 +28,10 @@
   }
 }
 
-* {color:var(--primary-color);}
+* {color:var(--primary-color); transition: all 1s ease;}
+
+
+body {color:var(--primary-background); background: var(--primary-background); font-family:"Inter","trebuchet ms"; border:0px; margin:10px; margin-top:0px; padding-top:0; font-size:1em;}
 
 /* CSS dos links abaixo */
 a {color:var(--link-color); text-decoration:none;}
@@ -39,20 +42,17 @@ a:hover img {border:0;}
 a:active img {border:0;}
 a:link img {border:0;}
 a:visited img {border:0;}
-
 /* CSS dos links acima */
 
 mark {color:var(--mark-color);background:var(--mark-bg);}
 code, .code {color:var(--code-color); border:1px dotted; border-color:var(--border-color); padding:10px; font-family:'courier new';}
-
-body {color:var(--primary-background); background: var(--primary-background); font-family:"Inter","trebuchet ms"; border:0px; margin:10px; margin-top:0px; padding-top:0; font-size:1em;}
 
 hr {height:5px; border:0; background:linear-gradient(to right, #9c0, orange, deeppink, purple, navy);border-radius:3px; clear:both; display:block;}
 
 div#contem {padding:20px; font-size:1em;}
 ul#nav li {display:inline; padding:10px}
 
-h1 {font-size:3.0em; color:var(--primeiro-titulo-color);}
+h1, a:has(h1) {font-size:3.0em; color:var(--primeiro-titulo-color);}
 h2 {font-size:2.0em; margin: 1em auto 0.3em; color:var(--segundo-titulo-color);}
 h3 {font-size:150%;}
 h4 {font-size:140%;}
@@ -64,16 +64,16 @@ h3, h4, h5, h6 {color:var(--segundo-titulo-color);}
 dt, dd.price {font-size:1.8em; font-weight:bold}
 dt {padding-right:3px;color:var(--termo-color);}
 dd {font-size:1.5em; padding-bottom:20px;}
-dd.valor {font-size:25px; float:right; padding-left:3px}
+dd.valor {font-size:110%; float:right; padding-left:3px}
 dd.detalhes {font-style:italic; float:left; padding:3px 0; width:100%;border-top:1px dashed #ccc;}
 p {font-size:0.9em;text-align:left; margin-top:60px;}
 
 #ring {padding:20px;}
-#ring h1 {font-size:40px;}
-#ring h2 {font-size:30px;}
+#ring h1 {font-size:200%;}
+#ring h2 {font-size:150%;}
 #ring p {margin-top:auto;}
 #ring dl {-moz-column-width: 330px; -webkit-column-width: 330px; -o-column-width:330px; column-width:330px;}
-#ring dt {text-align:center; float:none; padding-right:inherit; margin-top:25px; margin-bottom:10px; font-size:13px;   break-before:auto; break-inside: avoid-column; break-after: avoid-column;}
+#ring dt {text-align:center; float:none; padding-right:inherit; margin-top:25px; margin-bottom:10px; font-size:130%;   break-before:auto; break-inside: avoid-column; break-after: avoid-column;}
 #ring dd {margin:auto; text-align:center; break-before:avoid-column; break-inside: avoid-column; break-after:auto;}
 #ring a {color:skyblue;}
 #ring a:hover {color:linen;}
