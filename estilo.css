@@ -14,6 +14,15 @@
   --termo-color:light-dark(olive,#9c0);
   --mark-bg:light-dark(yellow,yellow);
   --mark-color:light-dark(#000,#000);
+
+  --barra-rolagem: light-dark (#fff,#333);
+  --barra-rolagem-thumb: light-dark (#fff,#333); 
+  --barra-rolagem-thumb-hover: light-dark (#fff,#333);
+  --barra-rolagem-active: light-dark (#99cc00,#333);
+  --barra-rolagem-track: light-dark (#fff,#333);
+  --barra-rolagem-track-piece: light-dark (#fff,#333);
+  --barra-rolagem-corner: light-dark (#fff,#333);   
+
 }
 
 :root {
@@ -52,7 +61,8 @@ hr {height:5px; border:0; background:linear-gradient(to right, #9c0, orange, dee
 div#contem {padding:20px; font-size:1em;}
 ul#nav li {display:inline; padding:10px}
 
-h1, a:has(h1) {font-size:3.0em; color:var(--primeiro-titulo-color);}
+h1, a:has(h1) {font-size:230%; color:var(--primeiro-titulo-color);}
+a:hover:has(h1), a h1:hover {text-decoration: none; color:var(--link-color);}
 h2 {font-size:2.0em; margin: 1em auto 0.3em; color:var(--segundo-titulo-color);}
 h3 {font-size:150%;}
 h4 {font-size:140%;}
@@ -90,20 +100,11 @@ audio {margin-left:auto; margin-right:auto; text-align:center; float:none; displ
 .gcse-searchresults {background-color:var(--primary-background) !important;}
 
 /** tudo abaixo sobre barra de rolagem */
-body::-webkit-scrollbar {background:#333; width:15px; height:15px;} /* barra de rolagem toda */
-body::-webkit-scrollbar-thumb {background:#333; box-shadow:0px 0px 2px 2px #fff inset;} /* parte da barra que se movimenta */
-body::-webkit-scrollbar-thumb:hover {background:#333; box-shadow:0px 0px 2px 2px #f90 inset;} /* parte da barra que se movimenta */
-body::-webkit-scrollbar-thumb:active {background: #333; box-shadow:0px 0px 2px 2px #9c0 inset;} /* parte da barra que se movimenta */
+body::-webkit-scrollbar {background:var(--barra-rolagem); width:15px; height:15px;} /* barra de rolagem toda */
+body::-webkit-scrollbar-thumb {background:var(--barra-rolagem-thumb); box-shadow:0px 0px 2px 2px #9c0 inset;} /* parte da barra que se movimenta */
+body::-webkit-scrollbar-thumb:hover {background:var(--barra-rolagem-thumb-hover); box-shadow:0px 0px 2px 2px #f90 inset;} /* parte da barra que se movimenta */
+body::-webkit-scrollbar-thumb:active {background:var(--barra-rolagem-active); box-shadow:0px 0px 2px 2px #9c0 inset;} /* parte da barra que se movimenta */
 body::-webkit-scrollbar-button {background:;} /* ponta da barra de rolagem */
-body::-webkit-scrollbar-track {background:#333;} /* fundo da barra de rolagem, parte fixa */
-body::-webkit-scrollbar-track-piece {background:#333;} /* fundo da barra de rolagem, parte que ainda falta rolar */
-body::-webkit-scrollbar-corner {background:#333;} /* canto inferior direito da barra de rolagem */
-body.white::-webkit-scrollbar {background:#fff; width:15px; height:15px;} /* barra de rolagem toda */
-body.white::-webkit-scrollbar-thumb {box-shadow:0 0 0 0; background: linear-gradient(to right,#ccc,#999,#ccc,#999);} /* parte da barra que se movimenta */
-body.white::-webkit-scrollbar-thumb:hover {box-shadow:0 0 0 0; background: linear-gradient(to right,chocolate,brown,chocolate,brown);} /* parte da barra que se movimenta */
-body.white::-webkit-scrollbar-thumb:active {box-shadow:0 0 0 0; background: linear-gradient(to right,#9c0,#690,#9c0,#690);} /* parte da barra que se movimenta */
-body.white::-webkit-scrollbar-button {background:;} /* ponta da barra de rolagem */
-body.white::-webkit-scrollbar-track {background:#fff;} /* fundo da barra de rolagem, parte fixa */
-body.white::-webkit-scrollbar-track-piece {background:#fff;} /* fundo da barra de rolagem, parte que ainda falta rolar */
-body.white::-webkit-scrollbar-corner {background:#fff;} /* canto inferior direito da barra de rolagem */
-/** tudo acima sobre barra de rolagem */
+body::-webkit-scrollbar-track {background:var(--barra-rolagem-track)} /* fundo da barra de rolagem, parte fixa */
+body::-webkit-scrollbar-track-piece {background:var(--barra-rolagem-track-piece);} /* fundo da barra de rolagem, parte que ainda falta rolar */
+body::-webkit-scrollbar-corner {background:var(--barra-rolagem-corner);} /* canto inferior direito da barra de rolagem */
