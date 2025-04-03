@@ -9,6 +9,7 @@
   --link-color: light-dark(#007FDB,lightblue);
   --link-sobre-color: light-dark(olive,#99cc00);
   --link-ativo-color: light-dark(deeppink,lightpink);
+  --sublinha-color: light-dark(#2E5894,#f0ffff);
   --code-color: light-dark(navy,lightblue);
   --border-color: light-dark(purple,lime);
   --termo-color:light-dark(olive,#9c0);
@@ -41,7 +42,7 @@ body {color:var(--primary-background); background: var(--primary-background); fo
 
 /* CSS dos links abaixo */
 a {color:var(--link-color); text-decoration:none;}
-a:hover {color:var(--link-sobre-color); text-decoration: underline; text-decoration-color:var(--link-color); text-decoration-thickness: 1px; text-decoration-style: wavy;}
+a:hover {color:var(--link-sobre-color); text-decoration: underline; text-decoration-color:var(--sublinha-color); text-decoration-thickness: 1px; text-decoration-style: wavy;}
 a:active {color:var(--link-ativo-color);}
 a img {border:0;}
 a:hover img {border:0;}
