@@ -35,11 +35,8 @@
   }
 }
 
-* {color:var(--primary-color); transition: all 1s ease;
-scrollbar-color:var(--primeiro-titulo-color) var(--primary-background);
-scroll-behavior: smooth;}
+* {color:var(--primary-color); transition: all 1s ease; scrollbar-color:var(--primeiro-titulo-color) var(--primary-background); scroll-behavior: smooth; text-decoration-skip-ink:none; text-underline-position:under;}
 ::-webkit-scrollbar {width:40px; height:40px; background: var(--primary-background);}
-
 body {color:var(--primary-background); background: var(--primary-background); font-family:"Inter","trebuchet ms"; border:0px; margin:10px; margin-top:0px; padding-top:0; font-size:1em;}
 
 /* CSS dos links abaixo */
