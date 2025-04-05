@@ -9,6 +9,7 @@
   --link-color: light-dark(#007FDB,lightblue);
   --link-sobre-color: light-dark(olive,#99cc00);
   --link-ativo-color: light-dark(deeppink,lightpink);
+  --sublinha-color:light-dark(#cff,#cff);
   --code-color: light-dark(navy,lightblue);
   --border-color: light-dark(purple,lime);
   --termo-color:light-dark(olive,#9c0);
@@ -44,7 +45,7 @@ body {color:var(--primary-background); background: var(--primary-background); fo
 
 /* CSS dos links abaixo */
 a {color:var(--link-color); text-decoration:none;}
-a:hover {color:var(--link-sobre-color); text-decoration: underline; text-decoration-color:var(--link-color); text-decoration-thickness: 1px; text-decoration-style: wavy;}
+a:hover {color:var(--link-sobre-color); text-decoration: underline; text-decoration-color:var(--sublinha-color); text-decoration-thickness:50%; text-decoration-style: solid; text-underline-offset:-50%; text-decoration-skip-ink:none;}
 a:active {color:var(--link-ativo-color);}
 a img {border:0;}
 a:hover img {border:0;}
@@ -61,7 +62,7 @@ hr {height:5px; border:0; background:linear-gradient(to right, #9c0, orange, dee
 div#contem {padding:20px; font-size:1em;}
 ul#nav li {display:inline; padding:10px}
 
-h1, a:has(h1) {font-size:230%; color:var(--primeiro-titulo-color);}
+h1, a:has(h1) {font-size:230%; color:var(--primeiro-titulo-color);margin-top:0;margin-bottom:0;}
 a:hover:has(h1), a h1:hover {text-decoration: none; color:var(--link-color);}
 h2 {font-size:2.0em; margin: 1em auto 0.3em; color:var(--segundo-titulo-color);}
 h3 {font-size:150%;}
@@ -76,7 +77,7 @@ dt {padding-right:3px;color:var(--termo-color);}
 dd {font-size:1.5em; padding-bottom:20px;}
 dd.valor {font-size:110%; float:right; padding-left:3px}
 dd.detalhes {font-style:italic; float:left; padding:3px 0; width:100%;border-top:1px dashed #ccc;}
-p {font-size:0.9em;text-align:left; margin-top:60px;}
+p {font-size:0.9em;text-align:left; margin-top:10px;}
 
 #ring {padding:20px;}
 #ring h1 {font-size:200%;}
