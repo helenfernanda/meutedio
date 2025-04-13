@@ -9,7 +9,7 @@
   --link-color: light-dark(#007FDB,lightblue);
   --link-sobre-color: light-dark(olive,#99cc00);
   --link-ativo-color: light-dark(deeppink,lightpink);
-  --sublinha-color:light-dark(#cff,#cff);
+  --sublinha-color:light-dark(#cff,#003366);
   --code-color: light-dark(navy,lightblue);
   --border-color: light-dark(purple,lime);
   --termo-color:light-dark(olive,#9c0);
@@ -38,7 +38,8 @@
 
 * {color:var(--primary-color); transition: all 1s ease; scrollbar-color:var(--primeiro-titulo-color) var(--primary-background); scroll-behavior: smooth; text-decoration-skip-ink:none; text-underline-position:under;}
 ::-webkit-scrollbar {width:40px; height:40px; background: var(--primary-background);}
-body {color:var(--primary-background); background: var(--primary-background); font-family:"Inter","trebuchet ms"; border:0px; margin:10px; margin-top:0px; padding-top:0; font-size:1em;}
+
+body {color:var(--primary-background); background: var(--primary-background); font-family:"Inter","trebuchet ms"; border:0px; margin:10px; margin-top:0px; margin-left:auto; margin-right:auto;padding-top:0; font-size:1em;}
 
 /* CSS dos links abaixo */
 a {color:var(--link-color); text-decoration:none;}
@@ -61,7 +62,7 @@ ul#nav li {display:inline; padding:10px}
 
 h1, a:has(h1) {font-size:230%; color:var(--primeiro-titulo-color);margin-top:0;margin-bottom:0;}
 a:hover:has(h1), a h1:hover {text-decoration: none; color:var(--link-color);}
-h2 {font-size:2.0em; margin: 1em auto 0.3em; color:var(--segundo-titulo-color);}
+h2 {font-size:170%; margin: 1em auto 0.3em; color:var(--segundo-titulo-color);}
 h3 {font-size:150%;}
 h4 {font-size:140%;}
 h5 {font-size:130%;}
@@ -94,5 +95,7 @@ p {font-size:0.9em;text-align:left; margin-top:10px;}
 
 video {margin-top:20px; margin-bottom:30px; margin-left:auto; margin-right:auto; text-align:center; display:block;}
 audio {margin-left:auto; margin-right:auto; text-align:center; float:none; display:block;}
+
+.gsc-control-cse {background-color:transparent !important; border:0 !important;}
 
 .gcse-searchresults {background-color:var(--primary-background) !important;}

@@ -1,0 +1,490 @@
+<html>
+<head>
+<style>
+:root {color-scheme: light dark;
+  --cor-inicial:#ff0;
+  --cor-final:#00f;
+  --cor-principal:light-dark(#000,#fff);
+  --cor-tabela:#000;
+  --bg-selecao:light-dark(#003,#fff0cc);
+  --cor-selecao:light-dark(#fff0cc,#003); 
+  --bg-codigo:light-dark(linen,#336);
+  --cor-codigo:light-dark(#300,linen);
+}
+::selection {background:var(--bg-selecao);color:var(--cor-selecao);}
+html {scrollbar-color:var(--cor-final) var(--cor-inicial);}
+body {font-family:Inter; color:var(--cor-principal); border:0; margin:20px;}
+h1 {font-family:"Garamond"; font-size:300%;}
+h1 mark {font-family:inherit;}
+h1 mark:nth-child(1) {background-color:var(--cor-inicial);}
+h1 mark:nth-child(2) {background-color:var(--cor-final);color:#fff;}
+div.code {margin:25px; padding:15px;background:var(--bg-codigo);color:var(--cor-codigo);font-family:"Courier New";}
+code {font-family:"Courier New";}
+table {text-align:center;font-family:Verdana; font-size:14px;color:var(--cor-tabela);}
+td {padding:5px;}
+td.corzinha {background-color:var(--bg-codigo); color:var(--cor-codigo);}
+td.vertical {writing-mode: vertical-rl;}
+tr td:nth-child(1)  {background-color:var(--bg-codigo); color:var(--cor-codigo);} 
+thead td {background-color:var(--cor-codigo); color:var(--bg-codigo);}
+thead td:nth-child(1) {background-color:var(--cor-codigo); color:var(--bg-codigo);}
+a {text-underline-position:under;}
+a:hover {text-decoration:none; background-color:color-mix(in hsl, var(--cor-inicial),var(--cor-final) 25%); outline:1px dotted currentcolor; color: hsl(0 100% 50%);}
+
+/* srgb começa aqui */
+.srgb:nth-child(3) {background-color: color-mix(in srgb, var(--cor-inicial), var(--cor-final) 0%);
+}
+.srgb:nth-child(4) {background-color: color-mix(in srgb, var(--cor-inicial), var(--cor-final) 25%);
+}
+.srgb:nth-child(5) {background-color: color-mix(in srgb, var(--cor-inicial), var(--cor-final) 50%);
+}
+.srgb:nth-child(6) {background-color: color-mix(in srgb, var(--cor-inicial), var(--cor-final) 75%);
+}
+.srgb:nth-child(7) {background-color: color-mix(in srgb, var(--cor-inicial), var(--cor-final) 100%);
+}
+/* srgb-linear começa aqui */
+.srgb-linear:nth-child(2) {background-color: color-mix(in srgb-linear, var(--cor-inicial), var(--cor-final) 0%);
+}
+.srgb-linear:nth-child(3) {background-color: color-mix(in srgb-linear, var(--cor-inicial), var(--cor-final) 25%);
+}
+.srgb-linear:nth-child(4) {background-color: color-mix(in srgb-linear, var(--cor-inicial), var(--cor-final) 50%);
+}
+.srgb-linear:nth-child(5) {background-color: color-mix(in srgb-linear, var(--cor-inicial), var(--cor-final) 75%);
+}
+.srgb-linear:nth-child(6) {background-color: color-mix(in srgb-linear, var(--cor-inicial), var(--cor-final) 100%);
+}
+/* display-p3 começa aqui */
+.display-p3:nth-child(2) {background-color: color-mix(in display-p3, var(--cor-inicial), var(--cor-final) 0%);
+}
+.display-p3:nth-child(3) {background-color: color-mix(in display-p3, var(--cor-inicial), var(--cor-final) 25%);
+}
+.display-p3:nth-child(4) {background-color: color-mix(in srgb-linear, var(--cor-inicial), var(--cor-final) 50%);
+}
+.display-p3:nth-child(5) {background-color: color-mix(in display-p3, var(--cor-inicial), var(--cor-final) 75%);
+}
+.display-p3:nth-child(6) {background-color: color-mix(in display-p3, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* a98-rgb começa aqui */
+.a98-rgb:nth-child(2) {background-color: color-mix(in a98-rgb, var(--cor-inicial), var(--cor-final) 0%);
+}
+.a98-rgb:nth-child(3) {background-color: color-mix(in a98-rgb, var(--cor-inicial), var(--cor-final) 25%);
+}
+.a98-rgb:nth-child(4) {background-color: color-mix(in a98-rgb, var(--cor-inicial), var(--cor-final) 50%);
+}
+.a98-rgb:nth-child(5) {background-color: color-mix(in a98-rgb, var(--cor-inicial), var(--cor-final) 75%);
+}
+.a98-rgb:nth-child(6) {background-color: color-mix(in a98-rgb, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* prophoto-rgb começa aqui */
+.prophoto-rgb:nth-child(2) {background-color: color-mix(in prophoto-rgb, var(--cor-inicial), var(--cor-final) 0%);
+}
+.prophoto-rgb:nth-child(3) {background-color: color-mix(in prophoto-rgb, var(--cor-inicial), var(--cor-final) 25%);
+}
+.prophoto-rgb:nth-child(4) {background-color: color-mix(in prophoto-rgb, var(--cor-inicial), var(--cor-final) 50%);
+}
+.prophoto-rgb:nth-child(5) {background-color: color-mix(in prophoto-rgb, var(--cor-inicial), var(--cor-final) 75%);
+}
+.prophoto-rgb:nth-child(6) {background-color: color-mix(in prophoto-rgb, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* rec2020 começa aqui */
+.rec2020:nth-child(2) {background-color: color-mix(in rec2020, var(--cor-inicial), var(--cor-final) 0%);
+}
+.rec2020:nth-child(3) {background-color: color-mix(in rec2020, var(--cor-inicial), var(--cor-final) 25%);
+}
+.rec2020:nth-child(4) {background-color: color-mix(in rec2020, var(--cor-inicial), var(--cor-final) 50%);
+}
+.rec2020:nth-child(5) {background-color: color-mix(in rec2020, var(--cor-inicial), var(--cor-final) 75%);
+}
+.rec2020:nth-child(6) {background-color: color-mix(in rec2020,var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* lab começa aqui */
+.lab:nth-child(2) {background-color: color-mix(in lab, var(--cor-inicial), var(--cor-final) 0%);
+}
+.lab:nth-child(3) {background-color: color-mix(in lab, var(--cor-inicial), var(--cor-final) 25%);
+}
+.lab:nth-child(4) {background-color: color-mix(in lab, var(--cor-inicial), var(--cor-final) 50%);
+}
+.lab:nth-child(5) {background-color: color-mix(in lab, var(--cor-inicial), var(--cor-final) 75%);
+}
+.lab:nth-child(6) {background-color: color-mix(in lab, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* oklab começa aqui */
+.oklab:nth-child(2) {background-color: color-mix(in oklab, var(--cor-inicial), var(--cor-final) 0%);
+}
+.oklab:nth-child(3) {background-color: color-mix(in oklab, var(--cor-inicial), var(--cor-final) 25%);
+}
+.oklab:nth-child(4) {background-color: color-mix(in oklab, var(--cor-inicial), var(--cor-final) 50%);
+}
+.oklab:nth-child(5) {background-color: color-mix(in oklab, var(--cor-inicial), var(--cor-final) 75%);
+}
+.oklab:nth-child(6) {background-color: color-mix(in oklab, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* xyz começa aqui */
+.xyz:nth-child(2) {background-color: color-mix(in xyz, var(--cor-inicial), var(--cor-final) 0%);
+}
+.xyz:nth-child(3) {background-color: color-mix(in xyz, var(--cor-inicial), var(--cor-final) 25%);
+}
+.xyz:nth-child(4) {background-color: color-mix(in xyz, var(--cor-inicial), var(--cor-final) 50%);
+}
+.xyz:nth-child(5) {background-color: color-mix(in xyz, var(--cor-inicial), var(--cor-final) 75%);
+}
+.xyz:nth-child(6) {background-color: color-mix(in xyz, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* xyz-d50 começa aqui */
+.xyz-d50:nth-child(2) {background-color: color-mix(in xyz-d50, var(--cor-inicial), var(--cor-final) 0%);
+}
+.xyz-d50:nth-child(3) {background-color: color-mix(in xyz-d50, var(--cor-inicial), var(--cor-final) 25%);
+}
+.xyz-d50:nth-child(4) {background-color: color-mix(in xyz-d50, var(--cor-inicial), var(--cor-final) 50%);
+}
+.xyz-d50:nth-child(5) {background-color: color-mix(in xyz-d50, var(--cor-inicial), var(--cor-final) 75%);
+}
+.xyz-d50:nth-child(6) {background-color: color-mix(in xyz-d50, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* xyz-d65 começa aqui */
+.xyz-d65:nth-child(2) {background-color: color-mix(in xyz-d65, var(--cor-inicial), var(--cor-final) 0%);
+}
+.xyz-d65:nth-child(3) {background-color: color-mix(in xyz-d65, var(--cor-inicial), var(--cor-final) 25%);
+}
+.xyz-d65:nth-child(4) {background-color: color-mix(in xyz-d65, var(--cor-inicial), var(--cor-final) 50%);
+}
+.xyz-d65:nth-child(5) {background-color: color-mix(in xyz-d65, var(--cor-inicial), var(--cor-final) 75%);
+}
+.xyz-d65:nth-child(6) {background-color: color-mix(in xyz-d65, var(--cor-inicial), var(--cor-final) 100%);
+}
+/* polar colors space começa aqui */
+/* hsl começa aqui */
+.hsl:nth-child(3) {background-color: color-mix(in hsl, var(--cor-inicial), var(--cor-final) 0%);
+}
+.hsl:nth-child(4) {background-color: color-mix(in hsl, var(--cor-inicial), var(--cor-final) 25%);
+}
+.hsl:nth-child(5) {background-color: color-mix(in hsl, var(--cor-inicial), var(--cor-final) 50%);
+}
+.hsl:nth-child(6) {background-color: color-mix(in hsl, var(--cor-inicial), var(--cor-final) 75%);
+}
+.hsl:nth-child(7) {background-color: color-mix(in hsl, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* hwb começa aqui */
+.hwb:nth-child(2) {background-color: color-mix(in hwb, var(--cor-inicial), var(--cor-final) 0%);
+}
+.hwb:nth-child(3) {background-color: color-mix(in hwb, var(--cor-inicial), var(--cor-final) 25%);
+}
+.hwb:nth-child(4) {background-color: color-mix(in hwb, var(--cor-inicial), var(--cor-final) 50%);
+}
+.hwb:nth-child(5) {background-color: color-mix(in hwb, var(--cor-inicial), var(--cor-final) 75%);
+}
+.hwb:nth-child(6) {background-color: color-mix(in hwb, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* lch começa aqui */
+.lch:nth-child(2) {background-color: color-mix(in lch, var(--cor-inicial), var(--cor-final) 0%);
+}
+.lch:nth-child(3) {background-color: color-mix(in lch, var(--cor-inicial), var(--cor-final) 25%);
+}
+.lch:nth-child(4) {background-color: color-mix(in lch, var(--cor-inicial), var(--cor-final) 50%);
+}
+.lch:nth-child(5) {background-color: color-mix(in lch, var(--cor-inicial), var(--cor-final) 75%);
+}
+.lch:nth-child(6) {background-color: color-mix(in lch, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* oklch começa aqui */
+.oklch:nth-child(2) {background-color: color-mix(in oklch, var(--cor-inicial), var(--cor-final) 0%);
+}
+.oklch:nth-child(3) {background-color: color-mix(in oklch, var(--cor-inicial), var(--cor-final) 25%);
+}
+.oklch:nth-child(4) {background-color: color-mix(in oklch, var(--cor-inicial), var(--cor-final) 50%);
+}
+.oklch:nth-child(5) {background-color: color-mix(in oklch, var(--cor-inicial), var(--cor-final) 75%);
+}
+.oklch:nth-child(6) {background-color: color-mix(in oklch, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* longer começa aqui */
+/* hsl longer começa aqui */
+.hsl-longer:nth-child(3) {background-color: color-mix(in hsl longer hue, var(--cor-inicial), var(--cor-final) 0%);
+}
+.hsl-longer:nth-child(4) {background-color: color-mix(in hsl longer hue, var(--cor-inicial), var(--cor-final) 25%);
+}
+.hsl-longer:nth-child(5) {background-color: color-mix(in hsl longer hue, var(--cor-inicial), var(--cor-final) 50%);
+}
+.hsl-longer:nth-child(6) {background-color: color-mix(in hsl longer hue, var(--cor-inicial), var(--cor-final) 75%);
+}
+.hsl-longer:nth-child(7) {background-color: color-mix(in hsl longer hue, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* hwb longer começa aqui */
+.hwb-longer:nth-child(2) {background-color: color-mix(in hwb longer hue, var(--cor-inicial), var(--cor-final) 0%);
+}
+.hwb-longer:nth-child(3) {background-color: color-mix(in hwb longer hue, var(--cor-inicial), var(--cor-final) 25%);
+}
+.hwb-longer:nth-child(4) {background-color: color-mix(in hwb longer hue, var(--cor-inicial), var(--cor-final) 50%);
+}
+.hwb-longer:nth-child(5) {background-color: color-mix(in hwb longer hue, var(--cor-inicial), var(--cor-final) 75%);
+}
+.hwb-longer:nth-child(6) {background-color: color-mix(in hwb longer hue, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* lch começa aqui */
+.lch-longer:nth-child(2) {background-color: color-mix(in lch longer hue, var(--cor-inicial), var(--cor-final) 0%);
+}
+.lch-longer:nth-child(3) {background-color: color-mix(in lch longer hue, var(--cor-inicial), var(--cor-final) 25%);
+}
+.lch-longer:nth-child(4) {background-color: color-mix(in lch longer hue, var(--cor-inicial), var(--cor-final) 50%);
+}
+.lch-longer:nth-child(5) {background-color: color-mix(in lch longer hue, var(--cor-inicial), var(--cor-final) 75%);
+}
+.lch-longer:nth-child(6) {background-color: color-mix(in lch longer hue, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* oklch longer começa aqui */
+.oklch-longer:nth-child(2) {background-color: color-mix(in oklch longer hue, var(--cor-inicial), var(--cor-final) 0%);
+}
+.oklch-longer:nth-child(3) {background-color: color-mix(in oklch longer hue, var(--cor-inicial), var(--cor-final) 25%);
+}
+.oklch-longer:nth-child(4) {background-color: color-mix(in oklch longer hue, var(--cor-inicial), var(--cor-final) 50%);
+}
+.oklch-longer:nth-child(5) {background-color: color-mix(in oklch longer hue, var(--cor-inicial), var(--cor-final) 75%);
+}
+.oklch-longer:nth-child(6) {background-color: color-mix(in oklch longer hue, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+
+/* increasing começa aqui */
+/* hsl increasing começa aqui */
+.hsl-increasing:nth-child(3) {background-color: color-mix(in hsl increasing hue, var(--cor-inicial), var(--cor-final) 0%);
+}
+.hsl-increasing:nth-child(4) {background-color: color-mix(in hsl increasing hue, var(--cor-inicial), var(--cor-final) 25%);
+}
+.hsl-increasing:nth-child(5) {background-color: color-mix(in hsl increasing hue, var(--cor-inicial), var(--cor-final) 50%);
+}
+.hsl-increasing:nth-child(6) {background-color: color-mix(in hsl increasing hue, var(--cor-inicial), var(--cor-final) 75%);
+}
+.hsl-increasing:nth-child(7) {background-color: color-mix(in hsl increasing hue, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* hwb longer começa aqui */
+.hwb-increasing:nth-child(2) {background-color: color-mix(in hwb increasing hue, var(--cor-inicial), var(--cor-final) 0%);
+}
+.hwb-increasing:nth-child(3) {background-color: color-mix(in hwb increasing hue, var(--cor-inicial), var(--cor-final) 25%);
+}
+.hwb-increasing:nth-child(4) {background-color: color-mix(in hwb increasing hue, var(--cor-inicial), var(--cor-final) 50%);
+}
+.hwb-increasing:nth-child(5) {background-color: color-mix(in hwb increasing hue, var(--cor-inicial), var(--cor-final) 75%);
+}
+.hwb-increasing:nth-child(6) {background-color: color-mix(in hwb increasing hue, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* lch increasing começa aqui */
+.lch-increasing:nth-child(2) {background-color: color-mix(in lch increasing hue, var(--cor-inicial), var(--cor-final) 0%);
+}
+.lch-increasing:nth-child(3) {background-color: color-mix(in lch increasing hue, var(--cor-inicial), var(--cor-final) 25%);
+}
+.lch-increasing:nth-child(4) {background-color: color-mix(in lch increasing hue, var(--cor-inicial), var(--cor-final) 50%);
+}
+.lch-increasing:nth-child(5) {background-color: color-mix(in lch increasing hue, var(--cor-inicial), var(--cor-final) 75%);
+}
+.lch-increasing:nth-child(6) {background-color: color-mix(in lch increasing hue, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+
+/* oklch increasing começa aqui */
+.oklch-increasing:nth-child(2) {background-color: color-mix(in oklch increasing hue, var(--cor-inicial), var(--cor-final) 0%);
+}
+.oklch-increasing:nth-child(3) {background-color: color-mix(in oklch increasing hue, var(--cor-inicial), var(--cor-final) 25%);
+}
+.oklch-increasing:nth-child(4) {background-color: color-mix(in oklch increasing hue, var(--cor-inicial), var(--cor-final) 50%);
+}
+.oklch-increasing:nth-child(5) {background-color: color-mix(in oklch increasing hue, var(--cor-inicial), var(--cor-final) 75%);
+}
+.oklch-increasing:nth-child(6) {background-color: color-mix(in oklch increasing hue, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* decreasing começa aqui */
+/* hsl decreasing começa aqui */
+.hsl-decreasing:nth-child(3) {background-color: color-mix(in hsl decreasing hue, var(--cor-inicial), var(--cor-final) 0%);
+}
+.hsl-decreasing:nth-child(4) {background-color: color-mix(in hsl decreasing hue, var(--cor-inicial), var(--cor-final) 25%);
+}
+.hsl-decreasing:nth-child(5) {background-color: color-mix(in hsl decreasing hue, var(--cor-inicial), var(--cor-final) 50%);
+}
+.hsl-decreasing:nth-child(6) {background-color: color-mix(in hsl decreasing hue, var(--cor-inicial), var(--cor-final) 75%);
+}
+.hsl-decreasing:nth-child(7) {background-color: color-mix(in hsl decreasing hue, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* hwb decreasing começa aqui */
+.hwb-decreasing:nth-child(2) {background-color: color-mix(in hwb decreasing hue, var(--cor-inicial), var(--cor-final) 0%);
+}
+.hwb-decreasing:nth-child(3) {background-color: color-mix(in hwb decreasing hue, var(--cor-inicial), var(--cor-final) 25%);
+}
+.hwb-decreasing:nth-child(4) {background-color: color-mix(in hwb decreasing hue, var(--cor-inicial), var(--cor-final) 50%);
+}
+.hwb-decreasing:nth-child(5) {background-color: color-mix(in hwb decreasing hue, var(--cor-inicial), var(--cor-final) 75%);
+}
+.hwb-decreasing:nth-child(6) {background-color: color-mix(in hwb decreasing hue, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+/* lch decreasing começa aqui */
+.lch-decreasing:nth-child(2) {background-color: color-mix(in lch decreasing hue, var(--cor-inicial), var(--cor-final) 0%);
+}
+.lch-decreasing:nth-child(3) {background-color: color-mix(in lch decreasing hue, var(--cor-inicial), var(--cor-final) 25%);
+}
+.lch-decreasing:nth-child(4) {background-color: color-mix(in lch decreasing hue, var(--cor-inicial), var(--cor-final) 50%);
+}
+.lch-decreasing:nth-child(5) {background-color: color-mix(in lch decreasing hue, var(--cor-inicial), var(--cor-final) 75%);
+}
+.lch-decreasing:nth-child(6) {background-color: color-mix(in lch decreasing hue, var(--cor-inicial), var(--cor-final) 100%);
+}
+
+
+/* oklch decreasing começa aqui */
+.oklch-decreasing:nth-child(2) {background-color: color-mix(in oklch decreasing hue, var(--cor-inicial), var(--cor-final) 0%);
+}
+.oklch-decreasing:nth-child(3) {background-color: color-mix(in oklch decreasing hue, var(--cor-inicial), var(--cor-final) 25%);
+}
+.oklch-decreasing:nth-child(4) {background-color: color-mix(in oklch decreasing hue, var(--cor-inicial), var(--cor-final) 50%);
+}
+.oklch-decreasing:nth-child(5) {background-color: color-mix(in oklch decreasing hue, var(--cor-inicial), var(--cor-final) 75%);
+}
+.oklch-decreasing:nth-child(6) {background-color: color-mix(in oklch decreasing hue, var(--cor-inicial), var(--cor-final) 100%);
+}
+</style>
+
+</head>    
+
+<body>
+    <div id="topo"></div>
+    <script>$( "#topo" ).load( "template.html #menudecima" );</script>	
+
+        
+    <!-- início busca Google -->
+    <script async src="https://cse.google.com/cse.js?cx=partner-pub-2810932839099491:jw7n8ai459q"></script>
+     <div id="buscar"></div>
+    <script>$( "#buscar" ).load( "template.html #busca" );</script>
+    
+    <!-- fim busca Google -->
+    
+    <h1>color-mix(): de <mark>yellow</mark> a <mark>blue</mark></h1>
+
+<div class='code'>div {background-color: color-mix(in srgb, var(--cor-inicial), var(--cor-final) 50%);}</div>
+
+<p>Usei cores opostas para ficar mais fácil perceber como elas “evoluem” em cada método de interpolação.</p>
+
+<p>Esta página está disponível para edições no <a target="_blank" href="https://codepen.io/helenfernanda/pen/MYWMYpa">CodePen</a>. Para experimentar outras cores, mude apenas <code>--cor-inicial</code> e <code>--cor-final</code>:</p>
+
+<div class='code'>:root {<br/>
+  --cor-inicial:yellow;<br/>
+  --cor-final:blue;<br/>
+  }
+</div>
+
+<p>Sugestões: lime e magenta, cyan e red, pink e green, lightgreen e darkred.</p>
+
+<table align="center">
+  <thead><td colspan='2'>color-interpolation-method	</td><td>0% de blue</td> <td>25% de blue</td> <td>50% de blue</td> <td>75% de blue</td> <td>100% de blue</td></thead>
+    
+  <!-- srgb abaixo -->
+    <tr>     
+  <tr><td rowspan='11' class='vertical'>rectangular-color-space</td><td class='corzinha'>srgb</td><td class='srgb'>de yellow a blue</td> <td class='srgb'>de yellow a blue</td> <td class='srgb'>de yellow a blue</td> <td class='srgb'>de yellow a blue</td> <td class='srgb'>de yellow a blue</td></tr>
+  
+  <!-- srgb-linear abaixo -->
+    <tr><td>srgb-linear</td><td class='srgb-linear'>de yellow a blue</td> <td class='srgb-linear'>de yellow a blue</td> <td class='srgb-linear'>de yellow a blue</td> <td class='srgb-linear'>de yellow a blue</td> <td class='srgb-linear'>de yellow a blue</td></tr>
+  
+  <!-- display-p3 abaixo -->
+      <tr><td>display-p3</td><td class='display-p3'>de yellow a blue</td> <td class='display-p3'>de yellow a blue</td> <td class='display-p3'>de yellow a blue</td> <td class='display-p3'>de yellow a blue</td> <td class='display-p3'>de yellow a blue</td></tr>
+  
+    <!-- a98-rgb abaixo -->
+      <tr><td>a98-rgb</td><td class='a98-rgb'>de yellow a blue</td> <td class='a98-rgb'>de yellow a blue</td> <td class='a98-rgb'>de yellow a blue</td> <td class='a98-rgb'>de yellow a blue</td> <td class='a98-rgb'>de yellow a blue</td></tr>
+   
+  
+  <!-- prophoto-rgb abaixo -->
+    <tr><td>prophoto-rgb</td><td class='prophoto-rgb'>de yellow a blue</td> <td class='prophoto-rgb'>de yellow a blue</td> <td class='prophoto-rgb'>de yellow a blue</td> <td class='prophoto-rgb'>de yellow a blue</td> <td class='prophoto-rgb'>de yellow a blue</td></tr>
+  
+  <!-- rec2020 abaixo -->
+<tr><td>rec2020</td><td class='rec2020'>de yellow a blue</td> <td class='rec2020'>de yellow a blue</td> <td class='rec2020'>de yellow a blue</td> <td class='rec2020'>de yellow a blue</td> <td class='rec2020'>de yellow a blue</td></tr>
+  
+  <!-- lab abaixo -->
+  <tr><td>lab</td><td class='lab'>de yellow a blue</td> <td class='lab'>de yellow a blue</td> <td class='lab'>de yellow a blue</td> <td class='lab'>de yellow a blue</td> <td class='lab'>de yellow a blue</td>    
+  </tr>
+  
+  <!-- oklab abaixo -->
+  <tr><td>oklab</td><td class='oklab'>de yellow a blue</td> <td class='oklab'>de yellow a blue</td> <td class='oklab'>de yellow a blue</td> <td class='oklab'>de yellow a blue</td> <td class='oklab'>de yellow a blue</td></tr>
+  
+  <!-- xyz abaixo -->
+  <tr><td>xyz</td><td class='xyz'>de yellow a blue</td> <td class='xyz'>de yellow a blue</td> <td class='xyz'>de yellow a blue</td> <td class='xyz'>de yellow a blue</td> <td class='xyz'>de yellow a blue</td></tr>
+  
+  <!-- xyz-d50 abaixo -->
+  <tr><td>xyz-d50</td><td class='xyz-d50'>de yellow a blue</td> <td class='xyz-d50'>de yellow a blue</td> <td class='xyz-d50'>de yellow a blue</td> <td class='xyz-d50'>de yellow a blue</td> <td class='xyz-d50'>de yellow a blue</td></tr>
+  
+    <!-- xyz-d65 abaixo -->
+  <tr><td>xyz-d65</td><td class='xyz-d65'>de yellow a blue</td> <td class='xyz-d65'>de yellow a blue</td> <td class='xyz-d65'>de yellow a blue</td> <td class='xyz-d65'>de yellow a blue</td> <td class='xyz-d65'>de yellow a blue</td></tr>
+  
+    
+    <!-- hsl abaixo -->
+  <tr><td rowspan='4' class='vertical'>polar-color-space<td class='corzinha'>hsl</td><td class='hsl'>de yellow a blue</td> <td class='hsl'>de yellow a blue</td> <td class='hsl'>de yellow a blue</td> <td class='hsl'>de yellow a blue</td> <td class='hsl'>de yellow a blue</td></tr>
+  
+  <!-- hwb abaixo -->
+  <tr><td>hwb</td><td class='hwb'>de yellow a blue</td> <td class='hwb'>de yellow a blue</td> <td class='hwb'>de yellow a blue</td> <td class='hwb'>de yellow a blue</td> <td class='hwb'>de yellow a blue</td></tr>
+  
+  <!-- lch abaixo -->
+  <tr><td>lch</td><td class='lch'>de yellow a blue</td> <td class='lch'>de yellow a blue</td> <td class='lch'>de yellow a blue</td> <td class='lch'>de yellow a blue</td> <td class='lch'>de yellow a blue</td></tr>
+  
+  <!-- oklch abaixo -->
+  <tr><td>oklch</td><td class='oklch'>de yellow a blue</td> <td class='oklch'>de yellow a blue</td> <td class='oklch'>de yellow a blue</td> <td class='oklch'>de yellow a blue</td> <td class='oklch'>de yellow a blue</td></tr>
+  
+   
+  <!-- começa longer -->
+     <!-- hsl longer abaixo -->
+  <tr><td class='vertical' rowspan='4'>longer</td><td class='corzinha'>hsl longer hue</td><td class='hsl-longer'>de yellow a blue</td> <td class='hsl-longer'>de yellow a blue</td> <td class='hsl-longer'>de yellow a blue</td> <td class='hsl-longer'>de yellow a blue</td> <td class='hsl-longer'>de yellow a blue</td></tr>
+  
+  <!-- hwb longer abaixo -->
+  <tr><td>hwb longer hue</td><td class='hwb-longer'>de yellow a blue</td> <td class='hwb-longer'>de yellow a blue</td> <td class='hwb-longer'>de yellow a blue</td> <td class='hwb-longer'>de yellow a blue</td> <td class='hwb-longer'>de yellow a blue</td></tr>
+  
+  <!-- lch longer abaixo -->
+  <tr><td>lch longer hue</td><td class='lch-longer'>de yellow a blue</td> <td class='lch-longer'>de yellow a blue</td> <td class='lch-longer'>de yellow a blue</td> <td class='lch-longer'>de yellow a blue</td> <td class='lch-longer'>de yellow a blue</td></tr>
+  
+      <!-- oklch longer abaixo -->
+  <tr><td>oklch longer hue</td><td class='oklch-longer'>de yellow a blue</td> <td class='oklch-longer'>de yellow a blue</td> <td class='oklch-longer'>de yellow a blue</td> <td class='oklch-longer'>de yellow a blue</td> <td class='oklch-longer'>de yellow a blue</td></tr>
+    
+   <!-- começa increasing  -->
+     <!-- hsl increasing abaixo -->
+  <tr><td class='vertical' rowspan='4'>increasing</td><td class='corzinha'>hsl increasing hue</td><td class='hsl-increasing'>de yellow a blue</td> <td class='hsl-increasing'>de yellow a blue</td> <td class='hsl-increasing'>de yellow a blue</td> <td class='hsl-increasing'>de yellow a blue</td> <td class='hsl-increasing'>de yellow a blue</td></tr>
+  
+  <!-- hwb increasing abaixo -->
+  <tr><td>hwb increasing hue</td><td class='hwb-increasing'>de yellow a blue</td> <td class='hwb-increasing'>de yellow a blue</td> <td class='hwb-increasing'>de yellow a blue</td> <td class='hwb-increasing'>de yellow a blue</td> <td class='hwb-increasing'>de yellow a blue</td></tr>
+  
+  <!-- lch increasing abaixo -->
+  <tr><td>lch increasing hue</td><td class='lch-increasing'>de yellow a blue</td> <td class='lch-increasing'>de yellow a blue</td> <td class='lch-increasing'>de yellow a blue</td> <td class='lch-increasing'>de yellow a blue</td> <td class='lch-increasing'>de yellow a blue</td></tr>
+  
+<!-- oklch increasing abaixo -->
+  <tr><td>oklch increasing hue</td><td class='oklch-increasing'>de yellow a blue</td> <td class='oklch-increasing'>de yellow a blue</td> <td class='oklch-increasing'>de yellow a blue</td> <td class='oklch-increasing'>de yellow a blue</td> <td class='oklch-increasing'>de yellow a blue</td></tr>
+  
+   <!-- começa decreasing   -->
+     <!-- hsl decreasing abaixo -->
+  <tr><td class='vertical' rowspan='4'>decreasing</td><td class='corzinha'>hsl decreasing hue</td><td class='hsl-decreasing'>de yellow a blue</td> <td class='hsl-decreasing'>de yellow a blue</td> <td class='hsl-decreasing'>de yellow a blue</td> <td class='hsl-decreasing'>de yellow a blue</td> <td class='hsl-decreasing'>de yellow a blue</td></tr>
+  
+  <!-- hwb decreasing abaixo -->
+  <tr><td>hwb decreasing hue</td><td class='hwb-decreasing'>de yellow a blue</td> <td class='hwb-decreasing'>de yellow a blue</td> <td class='hwb-decreasing'>de yellow a blue</td> <td class='hwb-decreasing'>de yellow a blue</td> <td class='hwb-decreasing'>de yellow a blue</td></tr>
+  
+  <!-- lch decreasing abaixo -->
+  <tr><td>lch decreasing hue</td><td class='lch-decreasing'>de yellow a blue</td> <td class='lch-decreasing'>de yellow a blue</td> <td class='lch-decreasing'>de yellow a blue</td> <td class='lch-decreasing'>de yellow a blue</td> <td class='lch-decreasing'>de yellow a blue</td></tr>
+  
+<!-- oklch decreasing abaixo -->
+  <tr><td>oklch decreasing hue</td><td class='oklch-decreasing'>de yellow a blue</td> <td class='oklch-decreasing'>de yellow a blue</td> <td class='oklch-decreasing'>de yellow a blue</td> <td class='oklch-decreasing'>de yellow a blue</td> <td class='oklch-decreasing'>de yellow a blue</td></tr>
+  
+  
+</table>
+
+
+<p>Fontes: <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix">MDN Web Docs</a> e <a target="_blank" href="https://www.w3schools.com/cssref/func_color-mix.php">W3Schools</a>.</p>
+</body>
+</html>
