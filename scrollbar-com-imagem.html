@@ -13,8 +13,9 @@ body {background:#ffffff; font-family:'Droid Sans','Trebuchet MS';}
 ::-webkit-scrollbar-thumb {background:orange url(bg-para-barra.png) repeat;}
 ::-webkit-scrollbar-track {background:#ffffff;}
 ::-webkit-scrollbar-corner {background:orange url(bg-para-barra.png) repeat;}
-
 ::-webkit-resizer {background:#ffffff;}
+
+div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;}
 
 </style>
 </head>
@@ -37,16 +38,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p>Esta página é um anexo do post <a href="http://www.meutedio.com.br/2014/06/css-barra-de-rolagem-colorida-chrome-webkit.html">CSS: barra de rolagem colorida no Google Chrome</a>.</p>
 
-<p>Aqui temos um exemplo de barra de rolagem (scrollbar) com imagem que deve funcionar no <B>Google Chrome</B> e em outros navegadores que usam <B>webkit</B>, como <B>Opera</b> e <B>Flock</B>.</p>
+<p>Aqui temos um exemplo de barra de rolagem (scrollbar) colorida que deve funcionar no <B>Google Chrome</B> e em outros navegadores desktop que usam <B>webkit</B>.</p>
+
+<p>Para um método mais atual e que funciona em todos os navegadores, <a href="https://www.meutedio.com/2025/04/css-barra-rolagem-scrollbar-color.html">use scrollbar-color</a>.</p>
 
 <p>Código para a folha de estilos:</p>
-
+<div>
 <pre>
 ::-webkit-scrollbar {background:#ffffff; width:30px; height:30px;}
 ::-webkit-scrollbar-thumb {background:orange url(http://meutedio.freetzi.com/bg-para-barra.png) repeat;}
 ::-webkit-scrollbar-track {background:#ffffff;}
 ::-webkit-scrollbar-corner {background:orange url(http://meutedio.freetzi.com/bg-para-barra.png) repeat;}
 </pre>
+</div>
 
 <p>Onde está escrito <B>http://meutedio.freetzi.com/bg-para-barra.png</B> você coloca o endereço da imagem de sua preferência. A que uso neste exemplo é do site <a target="_blank" href="http://www.colourlovers.com/pattern/4893940/Disco_dance">Colour Lovers</a>.</p>
 

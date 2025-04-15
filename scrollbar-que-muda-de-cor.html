@@ -15,6 +15,7 @@ body {background:#ffffff; font-family:'Droid Sans','Trebuchet MS';}
 ::-webkit-scrollbar-thumb:hover {background:#ffffff; border:2px solid purple;}
 ::-webkit-scrollbar-thumb:active {background:deeppink; border:0;}
 ::-webkit-scrollbar-corner {background:#ffffff;}
+div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;}
 
 </style>
 </head>
@@ -37,10 +38,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p>Esta página é um anexo do post <a href="http://www.meutedio.com/2014/06/css-barra-de-rolagem-colorida-chrome-webkit.html">CSS: barra de rolagem colorida no Google Chrome</a>.</p>
 
-<p>Aqui temos um exemplo de barra de rolagem (scrollbar) que muda de cor. Ela deve funcionar no <B>Google Chrome</B> e em outros navegadores que usam <B>webkit</B>, como <B>Opera</b> e <B>Flock</B>.</p>
+<p>Aqui temos um exemplo de barra de rolagem (scrollbar) colorida que deve funcionar no <B>Google Chrome</B> e em outros navegadores desktop que usam <B>webkit</B>.</p>
+
+<p>Para um método mais atual e que funciona em todos os navegadores, <a href="https://www.meutedio.com/2025/04/css-barra-rolagem-scrollbar-color.html">use scrollbar-color</a>.</p>
 
 <p>Código para a folha de estilos:</p>
-
+<div>
 <pre>
 ::-webkit-scrollbar {background:#ffffff; width:20px; height:20px;}
 ::-webkit-scrollbar-thumb {background:purple;}
@@ -49,7 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 ::-webkit-scrollbar-corner {background:#ffffff;}
 ::-webkit-scrollbar-track {background:#ffffff;}
 </pre>
-
+</div>
 
 <p>Confira também:</p>
 <ul>

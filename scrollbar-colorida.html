@@ -4,7 +4,6 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810932839099491"
     crossorigin="anonymous"></script>
 <title>Barra de rolagem (scrollbar) colorida :: HTMHelen :: Meu Tédio</title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <style>
@@ -19,6 +18,7 @@ body {background:#ffffff; font-family:'Droid Sans','Trebuchet MS';}
 ::-webkit-scrollbar-track-piece {background:#ffffff;} /* fundo da barra de rolagem, parte que ainda falta rolar */
 ::-webkit-scrollbar-corner {background:#99cc00;} /* canto inferior direito da barra de rolagem */
 
+div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;}
 </style>
 </head>
 
@@ -30,10 +30,13 @@ body {background:#ffffff; font-family:'Droid Sans','Trebuchet MS';}
 
 <p>Esta página é um anexo do post <a href="http://www.meutedio.com/2014/06/css-barra-de-rolagem-colorida-chrome-webkit.html">CSS: barra de rolagem colorida no Google Chrome</a>.</p>
 
-<p>Aqui temos um exemplo de barra de rolagem (scrollbar) colorida que deve funcionar no <B>Google Chrome</B> e em outros navegadores que usam <B>webkit</B>, como <B>Opera</b> e <B>Flock</B>.</p>
+<p>Aqui temos um exemplo de barra de rolagem (scrollbar) colorida que deve funcionar no <B>Google Chrome</B> e em outros navegadores desktop que usam <B>webkit</B>.</p>
+
+<p>Para um método mais atual e que funciona em todos os navegadores, <a href="https://www.meutedio.com/2025/04/css-barra-rolagem-scrollbar-color.html">use scrollbar-color</a>.</p>
 
 <p>Código para a folha de estilos:</p>
 
+<div>
 <pre>
 ::-webkit-scrollbar {background: #ffffff;} /* barra de rolagem toda */
 ::-webkit-scrollbar-thumb {background: #000000;} /* parte da barra que se movimenta */
@@ -41,7 +44,7 @@ body {background:#ffffff; font-family:'Droid Sans','Trebuchet MS';}
 ::-webkit-scrollbar-track {background:#ffffff;} /* fundo da barra de rolagem, parte fixa */
 ::-webkit-scrollbar-track-piece {background:#ffffff;} /* fundo da barra de rolagem, parte que ainda falta rolar */
 ::-webkit-scrollbar-corner {background:#99cc00;} /* canto inferior direito da barra de rolagem */
-</pre>
+</pre></div>
 
 
 <p>Confira também:</p>
