@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810932839099491"
+<head>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810932839099491"
 	crossorigin="anonymous"></script>
-<title>Barra de rolagem (scrollbar) que muda de cor :: HTMHelen :: Meu Tédio</title>
+<title>Barra de rolagem (scrollbar) com border e outline :: HTMHelen :: Meu Tédio</title>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <style>
-* {transition:all 2s linear; -moz-transition:all 2s linear; -webkit-transition:all 2s linear; -o-transition:all 2s linear;}
-
+html {}
 body {background:#ffffff; font-family:'Droid Sans','Trebuchet MS';}
-
 ::-webkit-scrollbar {background:#ffffff; width:20px; height:20px;}
-::-webkit-scrollbar-thumb {background:purple;}
-::-webkit-scrollbar-thumb:hover {background:#ffffff; border:2px solid purple;}
-::-webkit-scrollbar-thumb:active {background:deeppink; border:0;}
-::-webkit-scrollbar-corner {background:#ffffff;}
+::-webkit-scrollbar-thumb {background:lightyellow; outline:2px dotted orange; border:2px dotted orange;}
+::-webkit-scrollbar-thumb:hover {background:#fff0ff; outline:2px dotted pink; border:2px dotted pink;}
+::-webkit-scrollbar-thumb:active {background:lightcyan; outline:2px dotted cyan; border:2px dotted cyan;}
+
 div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;}
 
 </style>
@@ -34,7 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T73PLJ');</script>
 <!-- End Google Tag Manager -->
 
-<h1>Barra de rolagem (scrollbar) que muda de cor</h1>
+<h1>Barra de rolagem (scrollbar) com border e outline</h1>
 
 <p>Esta página é um anexo do post <a href="https://www.meutedio.com/2014/06/css-barra-de-rolagem-colorida-chrome-webkit.html">CSS: barra de rolagem colorida com ::webkit-scrollbar</a>.</p>
 
@@ -43,14 +43,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Para um método mais atual e que funciona em todos os navegadores, <a href="https://www.meutedio.com/2025/04/css-barra-rolagem-scrollbar-color.html">use scrollbar-color</a>.</p>
 
 <p>Código para a folha de estilos:</p>
+
 <div>
 <pre>
-::-webkit-scrollbar {width:20px; height:20px;} /* barra de rolagem toda */
-::-webkit-scrollbar-thumb {background:purple;} /* parte móvel da barra de rolagem */
-::-webkit-scrollbar-thumb:hover {background:#ffffff; border:2px solid purple;} /* mouse sobre parte móvel da barra de rolagem */
-::-webkit-scrollbar-thumb:active {background:deeppink; border:0;} /* clique sobre parte móvel da barra de rolagem */
-::-webkit-scrollbar-corner {background:#ffffff;} /* canto da barra de rolagem */
-::-webkit-scrollbar-track {background:#ffffff;} /* fundo da barra de rolagem */
+::-webkit-scrollbar {background:#ffffff; width:20px; height:20px;} /* barra de rolagem toda */
+::-webkit-scrollbar-thumb {background:lightyellow; outline:2px dotted orange; border:2px dotted orange;} /* parte da barra que se movimenta */
+::-webkit-scrollbar-thumb:hover {background:#fff0ff; outline:2px dotted pink; border:2px dotted pink;} /* mouse sobre parte da barra que se movimenta */
+::-webkit-scrollbar-thumb:active {background:lightcyan; outline:2px dotted cyan; border:2px dotted cyan;} /* clique sobre parte da barra que se movimenta */
 </pre>
 </div>
 

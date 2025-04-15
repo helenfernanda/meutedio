@@ -1,0 +1,135 @@
+<div class='atualizado'>Tutorial atualizado dia 14/05/2022.</div>
+
+<div class='foto'><a href="//www.meutedio.com/2014/06/css-barra-de-rolagem-colorida-chrome-webkit.html#more"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-sJVH34ojBDkSpdb8HLTsxhyphenhyphenERS8cSm_-bv0_zJve5FPNQDqSUOUkYqaLx9blHo75_H7_GFvJT5HU1wjmCDGZdHkcxwyG08tw22BbHXiPjFA6BkpB60jV3t65kb1eh7HCBSsSVTzU47SA/s680/barra-de-rolagem-colorida.png" /></a></figure>
+
+<p>Aqui temos um exemplo de barra de rolagem (scrollbar) colorida que deve funcionar no <B>Google Chrome</B> e em outros navegadores desktop que usam <B>webkit</B>.</p>
+
+<p>Para um método mais atual e que funciona em todos os navegadores, <a href="https://www.meutedio.com/2025/04/css-barra-rolagem-scrollbar-color.html">use scrollbar-color</a>.</p><!--more-->
+
+
+<style>
+  h3 {margin-top:40px;}
+  h4 {margin-top:30px;}
+</style>
+
+<p>Este post poderia ter sido publicado mais cedo, só que eu fiquei empolgada testando 1001 peruices com o código e criando exemplos. Adoro barra de rolagem colorida! <span class='italic-soft'>#prontoconfessei</span></p>
+
+
+<p>Para quem ainda é inocente na internet (sabe de nada), esse recurso era muito comum no fim da década de 90 e no início da década passada. Blogueiros e webdesigners (me incluo) usaram e abusaram das barras de rolagem coloridas, até que ficou demodê. Mas, como todo mundo que tem mais de 20 anos já notou, tudo que fica demodê depois de um tempo fica vintage e daí vira moda de novo.</p>
+
+<!-- <p>Calma! Não disse que já virou moda de novo. No momento é só vintage.</p>
+
+<p>O código que colore a barra de rolagem naquele navegador indesejado eu já mostrei no post <a href="//www.meutedio.com/2005/07/barra-de-rolagem-colorida.html">Barra de rolagem colorida no Internet Explorer</a>. Ele é antigo, mas não tem problema porque o código não mudou desde 2005.</p> -->
+
+<p>Você consegue essa modificação usando pseudo-elementos CSS. O código é o seguinte:</p>
+
+
+<div class='code'>::-webkit-scrollbar {background: #99cc00;} <span class='italic-soft'>/* barra de rolagem toda */</span>
+::-webkit-scrollbar-thumb {background: #ff00ff;} <span class='italic-soft'>/* parte da barra que se movimenta */</span>
+::-webkit-scrollbar-button {background:#00ff00;} <span class='italic-soft'>/* ponta da barra de rolagem */</span>
+::-webkit-scrollbar-track {background:#ffff00;} <span class='italic-soft'>/* fundo da barra de rolagem, parte fixa */</span>
+::-webkit-scrollbar-track-piece {background:#00ffff;} <span class='italic-soft'>/* fundo da barra de rolagem, parte que ainda falta rolar */</span>
+::-webkit-scrollbar-corner {background:#99cc00;} <span class='italic-soft'>/* canto inferior direito da barra de rolagem */</span></div>
+
+
+<p>Lembrando que é um código CSS, logo tem que ficar na <a href="//www.meutedio.com/2012/06/folha-de-estilos-em-cascata.html">folha de estilos de sua página</a>, ou seja, entre as tags <code>&lt;style&gt;</code> e <code>&lt;/style&gt;</code> ou entre as tags <code>&lt;b:skin&gt;</code> e <code>&lt;/b:skin&gt;</code>, se você usa Blogger.</p>
+
+<p style='text-align:left;'>No exemplo acima, já coloquei algumas cores e o resultado vai ser uma barra de rolagem preta com fundo branco e pontas verdes, bem simples. Você pode vê-la na página: <a href="https://www.meutedio.com/p/barra-de-rolagem-colorida.html">www.meutedio.com/p/barra-de-rolagem-colorida.html</a>.</p>
+
+<p>Abaixo, seguem exemplos mais incrementados.</p>
+
+<h3>◆ Barra de rolagem com imagem</h3>
+
+<p>Este é o código para uma barra de rolagem mais larga e com imagem:</p>
+
+<div class='code'>::-webkit-scrollbar {background:#ffffff; width:30px; height:30px;}
+::-webkit-scrollbar-thumb {background:orange url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgobPRuV9e85aLQ6MLMsHX4yBWiWFYeglaC2fv9dvyo9L1Topb62hJ5rq_PuUtTUjCZUzuAAULRMweYecqvDFdD5xjJAjiZc8trsXn7JRPVfkDA-PtvIgniKllPsmZ9LtZyjCQnZjTJEhvl/s1600/triangulos.png) repeat;}
+::-webkit-scrollbar-track {background:#ffffff;}
+::-webkit-scrollbar-corner {background:orange url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgobPRuV9e85aLQ6MLMsHX4yBWiWFYeglaC2fv9dvyo9L1Topb62hJ5rq_PuUtTUjCZUzuAAULRMweYecqvDFdD5xjJAjiZc8trsXn7JRPVfkDA-PtvIgniKllPsmZ9LtZyjCQnZjTJEhvl/s1600/triangulos.png) repeat;}
+</div>
+
+<p>Quando uso <B>width</B> estou falando da largura da barra de rolagem vertical. Quando uso <B>height</B>, me refiro à altura da barra de rolagem horizontal. Acredito que fica mais elegante quando as duas têm a mesma largura, mas você pode colocá-las em tamanhos diferentes.</p>
+
+<p>Para usar em seu site, troque a URL da imagem por uma de sua preferência.</p>
+
+<p style='text-align:left;'>Veja o código em funcionamento na página de exemplo: <a href="https://www.meutedio.com/p/barra-de-rolagem-com-imagem.html">www.meutedio.com/p/barra-de-rolagem-com-imagem.html</a>.</p>
+
+<h3>◆ Barra de rolagem com sombra</h3>
+
+<p>Criei também um exemplo com sombra. Segue o código:</p>
+
+<div class='code'>::-webkit-scrollbar {background:#ffffff;width:20px; height:20px;}
+::-webkit-scrollbar-thumb {background:pink; box-shadow:0px 0px 10px deeppink inset;}
+::-webkit-scrollbar-corner {background:pink; box-shadow:0px 0px 10px deeppink inset;}
+::-webkit-scrollbar-track {background:#ffffff;}</div>
+
+<p style='text-align:left;'>Veja esta barra na página <a href="https://www.meutedio.com/p/barra-de-rolagem-com-sombra.html">www.meutedio.com/p/barra-de-rolagem-com-sombra.html</a>.</p>
+
+<p>Para saber como personalizar as sombras, visite o post <a href="//www.meutedio.com/2012/07/css-sombras-em-caixas-e-imagens.html">CSS: sombras em caixas em imagens</a>.</p>
+
+<h3>◆ Barra de rolagem com borda</h3>
+
+<p style='text-align:left;'>Segue uma página com exemplo de barra de rolagem com borda: <a href="https://www.meutedio.com/p/barra-de-rolagem-com-borda.html">www.meutedio.com/p/barra-de-rolagem-com-borda.html</a>:</p>
+
+<div class='code'>::-webkit-scrollbar {background:#ffffff; width:20px; height:20px;}
+::-webkit-scrollbar-thumb {background:lightyellow; border:2px dashed orange;}
+::-webkit-scrollbar-corner {background:#ffffff;}
+::-webkit-scrollbar-track {background:#ffffff;}</div>
+
+<p>Para aprender os vários tipos de bordas, visite o post <a href="//www.meutedio.com/2008/11/aprendendo-usar-bordas.html">Aprendendo a usar bordas</a>.</p>
+
+<h3>◆ Barra de rolagem que muda de cor</h3>
+
+<p>Neste exemplo a barra de rolagem muda de cor duas vezes: quando você passa o mouse sobre ela e quando clica na barra:</p>
+
+<div class='code'>::-webkit-scrollbar {background:#ffffff; width:20px; height:20px;}
+::-webkit-scrollbar-thumb {background:purple;}
+::-webkit-scrollbar-thumb:hover {background:#ffffff; border:2px solid purple;}
+::-webkit-scrollbar-thumb:active {background:deeppink; border:0;}
+::-webkit-scrollbar-corner {background:#ffffff;}</div>
+
+<p style='text-align:left;'>Veja em funcionamento na página <a href="https://www.meutedio.com/p/barra-de-rolagem-que-muda-de-cor.html">www.meutedio.com/p/barra-de-rolagem-que-muda-de-cor.html</a>.</p>
+
+<h3>◆ Barra de rolagem listrada (sem imagem) que muda de cor</h3>
+
+<p>Esse código é um pouco mais complexo:</p>
+
+<div class='code'>::-webkit-scrollbar {background:#ffffff; width:20px; height:20px;}
+::-webkit-scrollbar-thumb {background:repeating-linear-gradient(45deg, transparent, transparent 10px, #990099 10px, #990099 20px), linear-gradient(to bottom, #eeeeee, #999999);}
+::-webkit-scrollbar-thumb:hover {background:repeating-linear-gradient(45deg, transparent, transparent 10px,#99cc00 10px,#99cc00 20px), linear-gradient(to bottom, #eeeeee, #999999);}
+::-webkit-scrollbar-thumb:active {background:repeating-linear-gradient(45deg, transparent, transparent 10px,#0099cc 10px,#0099cc 20px), linear-gradient(to bottom, #eeeeee, #999999);}
+::-webkit-scrollbar-corner {background:#ffffff;}
+</div>
+
+<p style='text-align:left;'>Veja esse bonito recurso funcionando na página <a href="https://www.meutedio.com/p/barra-de-rolagem-listrada-sem-imagem.html">www.meutedio.com/p/barra-de-rolagem-listrada-sem-imagem.html</a>.</p>
+
+<h4>◆ Todos os exemplos:</h4>
+
+<ul>
+<li><a href="https://www.meutedio.com/p/barra-de-rolagem-colorida.html">Barra de rolagem colorida</a>
+<li><a href="https://www.meutedio.com/p/barra-de-rolagem-com-imagem.html">Barra de rolagem com imagem</a>
+<li><a href="https://www.meutedio.com/p/barra-de-rolagem-com-sombra.html">Barra de rolagem com sombra</a>
+<li><a href="https://www.meutedio.com/p/barra-de-rolagem-com-borda.html">Barra de rolagem com borda</a>
+<li><a href="https://www.meutedio.com/p/barra-de-rolagem-que-muda-de-cor.html">Barra de rolagem que muda de cor</a></li>
+<li><a href="https://www.meutedio.com/p/barra-de-rolagem-listrada-sem-imagem.html">Barra de rolagem listrada (sem imagem) que muda de cor</a>
+</ul>
+
+<h4>◆ Mais algumas dicas:</h4>
+
+<p>Você pode agrupar vários atributos em uma mesma barra de rolagem, só terá mais trabalho para deixá-la agradável e combinando com o resto do site.</p>
+
+<p>Neste post priorizei <b>cor e tamanho</b>. Para aprender a customizar ainda mais a barra de rolagem, <a href="//css-tricks.com/custom-scrollbars-in-webkit/" target="_blank">visite o site CSS Tricks</a>.</p>
+
+<p>Caso procure boas imagens <i>pattern</i>, sugiro o site <a href="https://www.colourlovers.com/patterns/most-loved/all-time/meta" target="_blank">ColourLovers.com</a>. A versão menor da imagem (para usar lado a lado em backgrounds) fica no link <B>Preview</B>.</p>
+
+<p>Para escolher cores, visite os posts:</p>
+<ul>
+<li><a href="https://www.meutedio.com/2005/12/tabela-de-cores.html">Tabela de cores</a>
+<li><a href="https://www.meutedio.com/2012/05/candy-colors-em-rgb-html.html">Tabela Candy Colors em RGB</a>
+<li><a href="https://www.meutedio.com/2009/10/como-usar-as-cores-em-rgb.html">Como usar as cores em RGB</a>
+<li><a href="https://www.meutedio.com/2007/05/cubo-de-cores-seguras.html">Cubo de cores seguras</a>
+</ul>
+
+<p>Se você estiver agora no Edge, no Google Chrome, no Opera ou em outro navegador <b>webkit</b>, vai notar que a barra deste blog atualmente (14/05/2022) é <span style='background-color:#99cc00; color:#fff; font-weight:bold;'>#99cc00</span>, que também é a cor de vários outros elementos do blog.</p>
+
+<p>Até mais!</p>

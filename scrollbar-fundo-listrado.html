@@ -2,7 +2,7 @@
 <html>
 <head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810932839099491"
 	crossorigin="anonymous"></script>
-<title>Barra de rolagem (scrollbar) que muda de cor :: HTMHelen :: Meu Tédio</title>
+<title>Barra de rolagem (scrollbar) com fundo listrado :: HTMHelen :: Meu Tédio</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <style>
@@ -10,11 +10,10 @@
 
 body {background:#ffffff; font-family:'Droid Sans','Trebuchet MS';}
 
-::-webkit-scrollbar {background:#ffffff; width:20px; height:20px;}
-::-webkit-scrollbar-thumb {background:purple;}
-::-webkit-scrollbar-thumb:hover {background:#ffffff; border:2px solid purple;}
-::-webkit-scrollbar-thumb:active {background:deeppink; border:0;}
-::-webkit-scrollbar-corner {background:#ffffff;}
+::-webkit-scrollbar {background:repeating-linear-gradient(45deg,transparent,transparent 10px,#9c0 10px,#9c0 20px), linear-gradient(to bottom,#eee,#999); width:20px; height:20px;}
+::-webkit-scrollbar-thumb {background:#999;border:4px #999 outset;}
+::-webkit-scrollbar-thumb:hover {background:#999; border:4px #999 inset;}
+::-webkit-scrollbar-thumb:active {background:#9c0;border:4px #9c0 ridge;}
 div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;}
 
 </style>
@@ -34,7 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T73PLJ');</script>
 <!-- End Google Tag Manager -->
 
-<h1>Barra de rolagem (scrollbar) que muda de cor</h1>
+<h1>Barra de rolagem (scrollbar) com fundo listrado</h1>
 
 <p>Esta página é um anexo do post <a href="https://www.meutedio.com/2014/06/css-barra-de-rolagem-colorida-chrome-webkit.html">CSS: barra de rolagem colorida com ::webkit-scrollbar</a>.</p>
 
@@ -45,18 +44,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Código para a folha de estilos:</p>
 <div>
 <pre>
-::-webkit-scrollbar {width:20px; height:20px;} /* barra de rolagem toda */
-::-webkit-scrollbar-thumb {background:purple;} /* parte móvel da barra de rolagem */
-::-webkit-scrollbar-thumb:hover {background:#ffffff; border:2px solid purple;} /* mouse sobre parte móvel da barra de rolagem */
-::-webkit-scrollbar-thumb:active {background:deeppink; border:0;} /* clique sobre parte móvel da barra de rolagem */
-::-webkit-scrollbar-corner {background:#ffffff;} /* canto da barra de rolagem */
-::-webkit-scrollbar-track {background:#ffffff;} /* fundo da barra de rolagem */
+::-webkit-scrollbar {background:repeating-linear-gradient(45deg,transparent,transparent 10px,#9c0 10px,#9c0 20px), linear-gradient(to bottom,#eee,#999); width:20px; height:20px;} /* tamanho e fundo da barra de rolagem */
+::-webkit-scrollbar-thumb {background:#999;border:4px #999 outset;} /* parte móvel da barra de rolagem */
+::-webkit-scrollbar-thumb:hover {background:#999; border:4px #999 inset;} /* mouse sobre parte móvel da barra de rolagem */
+::-webkit-scrollbar-thumb:active {background:#9c0;border:4px #9c0 ridge;} /* clique sobre parte móvel da barra de rolagem */
 </pre>
 </div>
 
-
 <div id="scrollbars"></div>
 <script>$( "#scrollbars" ).load( "template.html #menuscrollbar" );</script>	
+
 </body>
 
 </html>
