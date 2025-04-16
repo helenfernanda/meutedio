@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810932839099491"
+    crossorigin="anonymous"></script>
+<title>Barra de rolagem curva :: HTMHelen :: Meu Tédio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style>
+* {transition:all 2s linear; -moz-transition:all 2s linear; -webkit-transition:all 2s linear; -o-transition:all 2s linear;}
+
+body {background:#ffffff; font-family:'Droid Sans','Trebuchet MS';}
+
+::-webkit-scrollbar {width:25px; height:25px; border-radius:25px;}
+::-webkit-scrollbar-button {height:25px; width:25px;border:1px solid #fc0; border-right:5px solid #fc0; border-bottom:5px solid #fc0;border-radius:25px;outline:1px solid #ffc;background:#ffffcc;}
+::-webkit-scrollbar-button:hover {border:1px solid #fc0; border-top:5px solid #fc0; border-left:5px solid #fc0;}
+::-webkit-scrollbar-button:active {border:1px ridge #fc0; border-top:5px ridge #fc0; border-left:5px ridge #fc0;} 
+::-webkit-scrollbar-thumb {border:1px solid #fc0; border-right:5px solid #fc0; border-bottom:5px solid #fc0;border-radius:25px;outline:1px solid #ffc;background:#ffffcc;}
+::-webkit-scrollbar-thumb:hover {border:1px solid #fc0; border-top:5px solid #fc0; border-left:5px solid #fc0;}
+::-webkit-scrollbar-thumb:active {border:1px ridge #fc0; border-top:5px ridge #fc0; border-left:5px ridge #fc0;}
+div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;}
+</style>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<div id="topo"></div>
+<script>$( "#topo" ).load( "template.html #menudecima" );</script>	
+<h1>Barra de rolagem curva</h1>
+
+<p>Esta página é um anexo do post <a href="https://www.meutedio.com/2014/06/css-barra-de-rolagem-colorida-chrome-webkit.html">CSS: barra de rolagem colorida com ::webkit-scrollbar</a>.</p>
+
+<p>Aqui temos um exemplo de barra de rolagem colorida que deve funcionar no <B>Google Chrome</B> e em outros navegadores desktop que usam <B>webkit</B>.</p>
+
+<p>Para um método mais atual e que funciona em todos os navegadores, <a href="https://www.meutedio.com/2025/04/css-barra-rolagem-scrollbar-color.html">use scrollbar-color</a>.</p>
+
+<p>Código para a folha de estilos:</p>
+
+<div>
+<pre>
+::-webkit-scrollbar {width:25px; height:25px; border-radius:25px;} /* barra de rolagem toda */
+::-webkit-scrollbar-button {height:25px; width:25px;border:1px solid #fc0; border-right:5px solid #fc0; border-bottom:5px solid #fc0;border-radius:25px;outline:1px solid #ffc;background:#ffffcc;} /* botões da barra de rolagem */
+::-webkit-scrollbar-button:hover {border:1px solid #fc0; border-top:5px solid #fc0; border-left:5px solid #fc0;} /* botões da barra de rolagem quando o mouse passa por cima */
+::-webkit-scrollbar-button:active {border:1px ridge #fc0; border-top:5px ridge #fc0; border-left:5px ridge #fc0;} /* botões da barra de rolagem quando o mouse clica neles */
+::-webkit-scrollbar-thumb {border:1px solid #fc0; border-right:5px solid #fc0; border-bottom:5px solid #fc0;border-radius:25px;outline:1px solid #ffc;background:#ffffcc;} /* parte da barra de rolagem que desliza */
+::-webkit-scrollbar-thumb:hover {border:1px solid #fc0; border-top:5px solid #fc0; border-left:5px solid #fc0;} /* parte da barra de rolagem que desliza quando o mouse passa por cima */
+::-webkit-scrollbar-thumb:active {border:1px ridge #fc0; border-top:5px ridge #fc0; border-left:5px ridge #fc0;} /* mouse clica na parte da barra de rolagem que desliza */
+</pre></div>
+
+<div id="scrollbars"></div>
+<script>$( "#scrollbars" ).load( "template.html #menuscrollbar" );</script>	
+
+</body>
+
+</html>

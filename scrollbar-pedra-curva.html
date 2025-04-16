@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810932839099491"
+    crossorigin="anonymous"></script>
+<title>Barra de rolagem "pedra curva" :: HTMHelen :: Meu Tédio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style>
+* {transition:all 2s linear; -moz-transition:all 2s linear; -webkit-transition:all 2s linear; -o-transition:all 2s linear;}
+
+body {background:#ffffff; font-family:'Droid Sans','Trebuchet MS';}
+
+::-webkit-scrollbar {width:20px; height:20px; border-radius:20px;}
+::-webkit-scrollbar-button {border:5px ridge #ccc; height:20px; width:20px;background:#ccc;border-radius:20px;}
+::-webkit-scrollbar-button:hover {border:5px ridge #999; background:#999;border-radius:20px;}
+::-webkit-scrollbar-button:active {border:3px outset #ccc;background:#ccc;border-radius:20px;} 
+::-webkit-scrollbar-thumb {border:5px ridge #ccc; background:#ccc;border-radius:20px;}
+::-webkit-scrollbar-thumb:hover {border:5px ridge #999; background:#999;border-radius:20px;}
+::-webkit-scrollbar-thumb:active {border:3px outset #ccc;background:#ccc;border-radius:20px;}
+
+div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;}
+</style>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<div id="topo"></div>
+<script>$( "#topo" ).load( "template.html #menudecima" );</script>	
+<h1>Barra de rolagem “pedra curva”</h1>
+
+<p>Esta página é um anexo do post <a href="https://www.meutedio.com/2014/06/css-barra-de-rolagem-colorida-chrome-webkit.html">CSS: barra de rolagem colorida com ::webkit-scrollbar</a>.</p>
+
+<p>Aqui temos um exemplo de barra de rolagem colorida que deve funcionar no <B>Google Chrome</B> e em outros navegadores desktop que usam <B>webkit</B>.</p>
+
+<p>Para um método mais atual e que funciona em todos os navegadores, <a href="https://www.meutedio.com/2025/04/css-barra-rolagem-scrollbar-color.html">use scrollbar-color</a>.</p>
+
+<p>Código para a folha de estilos:</p>
+
+<div>
+<pre>
+    ::-webkit-scrollbar {width:20px; height:20px; border-radius:20px;} /* barra de rolagem toda */
+    ::-webkit-scrollbar-button {border:5px ridge #ccc; height:20px; width:20px;background:#ccc;border-radius:20px;} /* pontas da barra de rolagem */
+    ::-webkit-scrollbar-button:hover {border:5px ridge #999; background:#999;border-radius:20px;} /* mouse sobre pontas da barra de rolagem */
+    ::-webkit-scrollbar-button:active {border:3px outset #ccc;background:#ccc;border-radius:20px;} /* clique sobre as pontas da barra de rolagem */
+    ::-webkit-scrollbar-thumb {border:5px ridge #ccc; background:#ccc;border-radius:20px;} /* parte da barra que se movimenta */
+    ::-webkit-scrollbar-thumb:hover {border:5px ridge #999; background:#999;border-radius:20px;} /* mouse sobre parte da barra que se movimenta */
+    ::-webkit-scrollbar-thumb:active {border:3px outset #ccc;background:#ccc;border-radius:20px;} /* clique sobre parte da barra que se movimenta */
+</pre></div>
+
+<div id="scrollbars"></div>
+<script>$( "#scrollbars" ).load( "template.html #menuscrollbar" );</script>	
+
+</body>
+
+</html>
