@@ -36,10 +36,18 @@
   }
 }
 
-* {color:var(--primary-color); transition: all 1s ease; scrollbar-color:var(--primeiro-titulo-color) var(--primary-background); scroll-behavior: smooth; text-decoration-skip-ink:none; text-underline-position:under;}
+* {color:var(--primary-color); transition: all 1s ease; /* scrollbar-color:var(--primeiro-titulo-color) var(--primary-background); */ scroll-behavior: smooth; text-decoration-skip-ink:none; text-underline-position:under;}
 ::-webkit-scrollbar {width:40px; height:40px; background: var(--primary-background);}
 
 body {color:var(--primary-background); background: var(--primary-background); font-family:"Inter","trebuchet ms"; border:0px; margin:10px; margin-top:0px; margin-left:auto; margin-right:auto;padding-top:0; font-size:1em;}
+
+::-webkit-scrollbar {width:20px; height:20px; border-radius:20px;}
+::-webkit-scrollbar-button {height:20px; width:20px;border:1px solid tan; border-right:5px solid tan; border-bottom:5px solid tan;border-radius:20px;outline:1px solid tan;background:#FAD6A5;}
+::-webkit-scrollbar-button:hover {border:1px solid tan; border-top:5px solid tan; border-left:5px solid tan;}
+::-webkit-scrollbar-button:active {border:1px ridge tan; border-top:5px ridge tan; border-left:5px ridge tan;} 
+::-webkit-scrollbar-thumb {border:1px solid tan; border-right:5px solid tan; border-bottom:5px solid tan;border-radius:25px;outline:1px solid #FAD6A5;background:#FAD6A5;}
+::-webkit-scrollbar-thumb:hover {border:1px solid tan; border-top:5px solid tan; border-left:5px solid tan;}
+::-webkit-scrollbar-thumb:active {border:1px ridge tan; border-top:5px ridge tan; border-left:5px ridge tan;}
 
 /* CSS dos links abaixo */
 a {color:var(--link-color); text-decoration:none;}
