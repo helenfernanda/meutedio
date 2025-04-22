@@ -3,7 +3,7 @@
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810932839099491"
     crossorigin="anonymous"></script>
-<title>Barra de rolagem tracejada :: HTMHelen :: Meu Tédio</title>
+<title>Barra de rolagem com duas linhas :: HTMHelen :: Meu Tédio</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <style>
@@ -11,11 +11,11 @@
 
 body {background:#ffffff; font-family:'Droid Sans','Trebuchet MS';}
 
-::-webkit-scrollbar {width:15px; height:15px;}
-::-webkit-scrollbar-thumb:horizontal {border-bottom:7px dashed #66cc66;}
-::-webkit-scrollbar-thumb:vertical {border-right:7px dashed #66cc66;}
-::-webkit-scrollbar-thumb:hover {border-color:green;}
-::-webkit-scrollbar-thumb:active {border-color:brown;}
+::-webkit-scrollbar {width:8px; height:8px;}
+::-webkit-scrollbar-thumb:vertical {border-left:5px double olive;}
+::-webkit-scrollbar-thumb:horizontal {border-bottom:5px double olive;}
+::-webkit-scrollbar-thumb:hover {border-color:dodgerblue;}
+::-webkit-scrollbar-thumb:active {border-color:orchid;}
 
 div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;}
 </style>
@@ -25,7 +25,7 @@ div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<div id="topo"></div>
 <script>$( "#topo" ).load( "template.html #menudecima" );</script>	
-<h1>Barra de rolagem tracejada</h1>
+<h1>Barra de rolagem com duas linhas</h1>
 
 <p>Esta página é um anexo do post <a href="https://www.meutedio.com/2014/06/css-barra-de-rolagem-colorida-chrome-webkit.html">CSS: barra de rolagem colorida com ::webkit-scrollbar</a>.</p>
 
@@ -38,11 +38,11 @@ div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;
 <div>
 <pre>
 /* barra de rolagem começa aqui - meuted.io */
-::-webkit-scrollbar {width:15px; height:15px;} /* barra de rolagem toda */
-::-webkit-scrollbar-thumb:horizontal {border-bottom:7px dashed #66cc66;} /* parte móvel horizontal */
-::-webkit-scrollbar-thumb:vertical {border-right:7px dashed #66cc66;} /* parte móvel vertical */
-::-webkit-scrollbar-thumb:hover {border-color:green;} /* mouse sobre parte móvel */
-::-webkit-scrollbar-thumb:active {border-color:brown;} /* clique sobre parte móvel */
+::-webkit-scrollbar {width:8px; height:8px;} /* barra de rolagem toda */
+::-webkit-scrollbar-thumb:vertical {border-left:5px double olive;} /* parte móvel vertical */
+::-webkit-scrollbar-thumb:horizontal {border-bottom:5px double olive;} /* parte móvel horizontal */
+::-webkit-scrollbar-thumb:hover {border-color:dodgerblue;} /* mouse sobre parte móvel */
+::-webkit-scrollbar-thumb:active {border-color:orchid;} /* clique sobre parte móvel */
 /* barra de rolagem termina aqui - meuted.io */
 </pre></div>
 

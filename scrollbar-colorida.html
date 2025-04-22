@@ -11,12 +11,14 @@
 
 body {background:#ffffff; font-family:'Droid Sans','Trebuchet MS';}
 
-::-webkit-scrollbar {background:linen;} /* barra de rolagem toda */
-::-webkit-scrollbar-thumb {background: #000000;} /* parte da barra que se movimenta */
-::-webkit-scrollbar-button {background:#99cc00;} /* ponta da barra de rolagem */
-::-webkit-scrollbar-corner {background:#99cc00;} /* canto inferior direito da barra de rolagem */
+::-webkit-scrollbar {height:15px;background:lightyellow;}
+::-webkit-scrollbar-button {background:#0ff;}
+::-webkit-scrollbar-thumb {background:pink;}
+::-webkit-scrollbar-button:hover, ::-webkit-scrollbar-thumb:hover {background: yellow;}
+::-webkit-scrollbar-button:active,::-webkit-scrollbar-thumb:active {background: lime;}
+::-webkit-scrollbar-corner {background:greenyellow;} /* canto inferior direito da barra de rolagem */
 
-div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;}
+div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto; height:100px;}
 </style>
 </head>
 
@@ -24,11 +26,11 @@ div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<div id="topo"></div>
 <script>$( "#topo" ).load( "template.html #menudecima" );</script>	
-<h1>Barra de rolagem (scrollbar) colorida</h1>
+<h1>Barra de rolagem colorida</h1>
 
 <p>Esta página é um anexo do post <a href="https://www.meutedio.com/2014/06/css-barra-de-rolagem-colorida-chrome-webkit.html">CSS: barra de rolagem colorida com ::webkit-scrollbar</a>.</p>
 
-<p>Aqui temos um exemplo de barra de rolagem (scrollbar) colorida que deve funcionar no <B>Google Chrome</B> e em outros navegadores desktop que usam <B>webkit</B>.</p>
+<p>Aqui temos um exemplo de barra de rolagem colorida que deve funcionar no <B>Google Chrome</B> e em outros navegadores desktop que usam <B>webkit</B>.</p>
 
 <p>Para um método mais atual e que funciona em todos os navegadores, <a href="https://www.meutedio.com/2025/04/css-barra-rolagem-scrollbar-color.html">use scrollbar-color</a>.</p>
 
@@ -36,10 +38,13 @@ div:has(pre){overflow:auto; max-width:800px; margin-left:auto;margin-right:auto;
 
 <div>
 <pre>
-::-webkit-scrollbar {background: #ffffff;} /* barra de rolagem toda */
-::-webkit-scrollbar-thumb {background: #000000;} /* parte da barra que se movimenta */
-::-webkit-scrollbar-button {background:#99cc00;} /* ponta da barra de rolagem */
-::-webkit-scrollbar-corner {background:#99cc00;} /* canto inferior direito da barra de rolagem */
+/* barra de rolagem começa aqui - meuted.io */
+    ::-webkit-scrollbar {height:15px;background:lightyellow;} /* barra de rolagem toda */
+    ::-webkit-scrollbar-button {background:#0ff;}::-webkit-scrollbar-thumb {background:pink;} /* parte móvel */
+    ::-webkit-scrollbar-button:hover, ::-webkit-scrollbar-thumb:hover {background: yellow;} /* mouse sobre parte móvel e sobre botão */
+    ::-webkit-scrollbar-button:active, ::-webkit-scrollbar-thumb:active {background: lime;} /* clique sobre parte móvel e sobre botão */
+    ::-webkit-scrollbar-corner {background:greenyellow;} /* canto inferior direito da barra de rolagem - só aparece quando as duas barras de rolagem são necessárias, vertical e horizontal */
+/* barra de rolagem termina aqui - meuted.io */
 </pre></div>
 
 <div id="scrollbars"></div>
