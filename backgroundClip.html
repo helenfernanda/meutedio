@@ -1,0 +1,33 @@
+
+
+<style>
+body {font-family:verdana; 
+    background:url("https://meuted.io/images/3100854.png") fixed #1E192B; 
+margin:0px; padding: 0;}
+
+h2 {padding:5px; background-clip:padding-box; background:url('https://meuted.io/images/3100836.png') fixed rgba(255,255,255,50%);}
+
+.clip {background: url('https://meuted.io/images/3100840.png') fixed #6B90B7;
+  block-size:100px;
+  border:10px #ccc dashed;
+  padding:20px;}
+
+.border {background-clip: border-box;}
+
+.padding {background-clip: padding-box;}
+
+.content {background-clip: content-box;}
+
+mark {background-color:rgba(255,255,255,50%); padding:5px;}
+</style>
+
+<body>
+<h2><mark>background-clip</mark></h2>
+<div class='clip'><mark>padrão</mark></div>
+<br/>
+<div class='clip border'><mark>background-clip: border-box;</mark></div>
+<br/>
+<div class='clip padding'><mark>background-clip: padding-box;</mark></div>
+<br/>
+<div class='clip content'><mark>background-clip: content-box;</mark></div>
+</body>
