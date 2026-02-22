@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter');
+@import url('https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
 :root {
   color-scheme: light dark;
   --primary-color: light-dark(#000, #fff);
@@ -38,7 +39,7 @@
 
 * {color:var(--primary-color); transition: all 1s ease; scrollbar-color:var(--primeiro-titulo-color) var(--primary-background); scroll-behavior: smooth; text-decoration-skip-ink:none; text-underline-position:under;}
 
-body {color:var(--primary-background); background: var(--primary-background); font-family:"Inter","trebuchet ms"; border:0px; margin:10px; margin-top:0px; margin-left:auto; margin-right:auto;padding-top:0; font-size:1em;}
+body {color:var(--primary-background); background: var(--primary-background); font-family:"Vend Sans",sans-serif; font-size:1em; margin:30px; border:0;}
 
 /* CSS dos links abaixo */
 a {color:var(--link-color); text-decoration:none;}
@@ -59,7 +60,9 @@ hr {height:5px; border:0; background:linear-gradient(to right, #9c0, orange, dee
 div#contem {padding:20px; font-size:1em;}
 ul#nav li {display:inline; padding:10px}
 
-h1, a:has(h1) {font-size:230%; color:var(--primeiro-titulo-color);margin-top:0;margin-bottom:0;}
+nav {margin-bottom:30px;}
+
+h1, a:has(h1) {font-size:230%; color:var(--primeiro-titulo-color);margin-top:0;margin-bottom:0;margin-bottom:20px;}
 a:hover:has(h1), a h1:hover {text-decoration: none; color:var(--link-color);}
 h2 {font-size:170%; margin: 1em auto 0.3em; color:var(--segundo-titulo-color);}
 h3 {font-size:150%;}
@@ -68,6 +71,10 @@ h5 {font-size:130%;}
 h6 {font-size:120%;}
 
 h3, h4, h5, h6 {color:var(--segundo-titulo-color);}
+
+/* tr:nth-child(odd) {background:rgb(226, 255, 247);}
+tr:nth-child(even) {background:rgb(254, 212, 255);}  */
+th, td {padding:5px;}
 
 dt, dd.price {font-size:1.8em; font-weight:bold}
 dt {padding-right:3px;color:var(--termo-color);}
