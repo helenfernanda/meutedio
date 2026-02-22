@@ -44,7 +44,21 @@ body {margin-left:auto !important; margin-right:auto !important;max-width:850px;
 	</script>
 	
 <h2>No blog:</h2>
-<rssapp-list id="QdVfNJhWHnWUJIm6"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
+
+<script>
+	// Source - https://stackoverflow.com/a/6271906
+// Posted by Andrew Childs, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-02-22, License - CC BY-SA 3.0
+function parseRSS(url, callback) {
+  $.ajax({
+    url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent("https://www.meutedio.com/feeds/posts/default?alt=rss"),
+    dataType: 'json',
+    success: function(data) {
+      callback(data.responseData.feed);
+    }
+  });
+}
+</script>
 
 <hr/>
 </body>	
