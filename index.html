@@ -33,6 +33,7 @@ body {margin-left:auto !important; margin-right:auto !important;max-width:850px;
 	
 <!-- início busca Google -->
 <script async src="https://cse.google.com/cse.js?cx=partner-pub-2810932839099491:jw7n8ai459q"></script>
+
  <div id="buscar"></div>
 <script>$( "#buscar" ).load( "template.html #busca" );</script>
 
@@ -45,20 +46,10 @@ body {margin-left:auto !important; margin-right:auto !important;max-width:850px;
 	
 <h2>No blog:</h2>
 
-<script>
-	// Source - https://stackoverflow.com/a/6271906
-// Posted by Andrew Childs, modified by community. See post 'Timeline' for change history
-// Retrieved 2026-02-22, License - CC BY-SA 3.0
-function parseRSS(url, callback) {
-  $.ajax({
-    url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent("https://www.meutedio.com/feeds/posts/default?alt=rss"),
-    dataType: 'json',
-    success: function(data) {
-      callback(data.responseData.feed);
-    }
-  });
-}
+<div id='feed'></div>
+  <script> $("#feed").load("https://www.meutedio.com/feeds/posts/default");
 </script>
+</body>
 
 <hr/>
 </body>	
