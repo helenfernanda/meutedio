@@ -61,21 +61,12 @@ pre {font-family:'courier new';}
 
 hr {height:5px; border:0; background:linear-gradient(to right, #9c0, orange, deeppink, purple, navy);border-radius:3px; clear:both; display:block;}
 
-div#contem {padding:20px; font-size:1em;}
-ul#nav li {display:inline; padding:10px}
-
-div#conteudo {margin:2vw;}
-div#conteudo h1 {margin-top:0.5vw;font-size:10vw; background:repeating-linear-gradient(to bottom,#ff00ff,darkorange,green) !important;background-clip:text !important;background-size:cover !important;text-fill-color: transparent !important;-webkit-background-clip: text !important;  -webkit-text-fill-color: transparent !important; width: auto;}
-div#conteudo ul {margin-left:1vw;}
-div#conteudo li {padding-left: 1vw;}
-
-
 /* template */
 #menudecima {padding: 1vw;}
 
 nav {margin-bottom:30px;}
 
-h1, a:has(h1) {font-size:230%; color:var(--primeiro-titulo-color);margin-top:0;margin-bottom:0;}
+h1, a:has(h1) {font-size:230%;}
 a:hover:has(h1), a h1:hover {text-decoration: none; color:var(--link-color);}
 h2 {font-size:170%; margin: 1em auto 0.3em; color:var(--segundo-titulo-color);}
 h3 {font-size:150%;}
@@ -85,13 +76,21 @@ h6 {font-size:120%;}
 
 h3, h4, h5, h6 {color:var(--segundo-titulo-color);}
 
+div#contem {padding:20px; font-size:1em;}
+ul#nav li {display:inline; padding:10px}
+
+div#conteudo {margin:1.5vw;}
+div#conteudo h1 {margin-top:0; margin-bottom:0;font-size:10vw; background:repeating-linear-gradient(to bottom,#ff00ff,darkorange,green) !important;background-clip:text !important;background-size:cover !important;text-fill-color: transparent !important;-webkit-background-clip: text !important;  -webkit-text-fill-color: transparent !important; width: auto;}
+div#conteudo ul {margin-left:1vw;}
+div#conteudo li {padding-left: 1vw;}
+
 /* tr:nth-child(odd) {background:rgb(226, 255, 247);}
 tr:nth-child(even) {background:rgb(254, 212, 255);}  */
 th, td {padding:5px;}
 
-dt, dd.price {font-size:1.8em; font-weight:bold}
+dt, dd.price {font-size:1.2em; font-weight:bold}
 dt {padding-right:3px;color:var(--termo-color);}
-dd {font-size:1.5em; padding-bottom:20px;}
+dd {font-size:1.3em; padding-bottom:2vw;}
 dd.valor {font-size:110%; float:right; padding-left:3px}
 dd.detalhes {font-style:italic; float:left; padding:3px 0; width:100%;border-top:1px dashed #ccc;}
 p {font-size:1em;text-align:left; margin-top:10px;}
