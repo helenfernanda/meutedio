@@ -39,7 +39,7 @@
 
 * {color:var(--primary-color); transition: all 1s ease; scrollbar-color:var(--primeiro-titulo-color) var(--primary-background); scroll-behavior: smooth; text-decoration-skip-ink:none; text-underline-position:under;}
 
-body {color:var(--primary-background); background: var(--primary-background); font-family:"Vend Sans",sans-serif;  font-size:5vw; margin:30px; border:0;}
+body {color:var(--primary-background); background: var(--primary-background); font-family:"Vend Sans",sans-serif; font-size:1em; margin:1vw; border:0; width:fit-content}
 
 /* CSS dos links abaixo */
 a {color:var(--link-color); text-decoration:none;}
@@ -60,9 +60,13 @@ hr {height:5px; border:0; background:linear-gradient(to right, #9c0, orange, dee
 div#contem {padding:20px; font-size:1em;}
 ul#nav li {display:inline; padding:10px}
 
+div#conteudo {margin:2vw;}
+div#conteudo ul {margin-left:1vw;}
+div#conteudo li {padding-left: 1vw;}
+
 nav {margin-bottom:30px;}
 
-h1, a:has(h1) {font-size:230%; color:var(--primeiro-titulo-color);margin-top:0;margin-bottom:0;margin-bottom:20px;}
+h1, a:has(h1) {font-size:230%; color:var(--primeiro-titulo-color);margin-top:0;margin-bottom:0;}
 a:hover:has(h1), a h1:hover {text-decoration: none; color:var(--link-color);}
 h2 {font-size:170%; margin: 1em auto 0.3em; color:var(--segundo-titulo-color);}
 h3 {font-size:150%;}
