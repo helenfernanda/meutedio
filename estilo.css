@@ -39,7 +39,7 @@
 
 * {color:var(--primary-color); transition: all 1s ease; scrollbar-color:var(--primeiro-titulo-color) var(--primary-background); scroll-behavior: smooth; text-decoration-skip-ink:none; text-underline-position:under;}
 
-body {color:var(--primary-background); background: var(--primary-background); font-family:"Vend Sans",sans-serif; font-size:1em; margin:30px; border:0;}
+body {color:var(--primary-background); background: var(--primary-background); font-family:"Vend Sans",sans-serif; font-size:medium; margin:30px; border:0;}
 
 /* CSS dos links abaixo */
 a {color:var(--link-color); text-decoration:none;}
