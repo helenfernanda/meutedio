@@ -42,7 +42,7 @@
 html {background-image:url("https://meuted.io/images/3100844.png"),url("https://meuted.io/images/3100786.png");
    background-blend-mode:multiply; scrollbar-color:white #160B2B;}
 
-body {color:var(--primary-background); background: var(--primary-background); font-family:"Vend Sans",sans-serif; font-size:1em; margin:1vw; border:0;}
+body {color:var(--primary-background); background: var(--primary-background); font-family:"Vend Sans",sans-serif; font-size:1.2em; margin:1vw; border:0;}
 
 /* CSS dos links abaixo */
 a {color:var(--link-color); text-decoration:none;}
