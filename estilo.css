@@ -65,8 +65,6 @@ hr {height:5px; border:0; background:linear-gradient(to right, #9c0, orange, dee
 
 #topo {margin:0;}
 
-#caixaBusca {float:right;}
-
 nav {margin-bottom:0px;}
 
 h1, a:has(h1) {font-size:230%;}
@@ -121,5 +119,6 @@ audio {margin-left:auto; margin-right:auto; text-align:center; float:none; displ
   justify-content: center; /* Horizontal centering */
   align-items: center;     /* Vertical centering */}
 
-/* .gsc-control-cse {background-color:inherit !important; border:0 !important;}
+/*#caixaBusca {float:right;}
+.gsc-control-cse {background-color:inherit !important; border:0 !important;}
 .gcse-searchresults {background-color:var(--primary-background) !important;} */
