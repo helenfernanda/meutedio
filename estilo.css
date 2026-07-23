@@ -106,7 +106,7 @@ p {font-size:1em;text-align:left; margin-top:10px;}
 #ring a {color:skyblue;}
 #ring a:hover {color:linen;}
 
-.centro {margin-left:auto; margin-right:auto;text-align:center;display: flex;
+.centro {margin-left:auto; margin-right:auto;text-align:center;
   justify-content: center; /* Horizontal centering */
   align-items: center;     /* Vertical centering */}
 
@@ -115,10 +115,9 @@ p {font-size:1em;text-align:left; margin-top:10px;}
 video {margin-top:20px; margin-bottom:30px; margin-left:auto; margin-right:auto; text-align:center; display:block;}
 audio {margin-left:auto; margin-right:auto; text-align:center; float:none; display:block;}
 
-.centro {margin-left:auto; margin-right:auto;text-align:center;
-  justify-content: center; /* Horizontal centering */
-  align-items: center;     /* Vertical centering */}
+.gcse-search {display:block; margin-left:auto; margin-right:auto;width:auto;}
+.gsc-control {width:auto;}
 
-/*#caixaBusca {float:right;}
+/* #caixaBusca {float:right;}
 .gsc-control-cse {background-color:inherit !important; border:0 !important;}
 .gcse-searchresults {background-color:var(--primary-background) !important;} */
